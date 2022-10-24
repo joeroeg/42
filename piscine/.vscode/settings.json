@@ -1,0 +1,11 @@
+{
+	"debug.autoExpandLazyVariables": true,
+	"files.associations": {
+		"*.c": "c",
+		"stdio.h": "c",
+		"string": "c",
+		"iosfwd": "c",
+		"ostream": "c",
+		"stdbool.h": "c"
+	}
+}
