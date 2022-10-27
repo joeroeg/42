@@ -6,15 +6,13 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:50:12 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/10/24 14:20:54 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/10/26 22:03:22 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-
-int main()
+int	ft_isalpha(int c)
 {
-
-	return(0);
+	if ((c > 64 && c < 91) || (c > 96 && c <= 122))
+		return (1);
+	return (0);
 }
