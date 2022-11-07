@@ -6,7 +6,7 @@
 #    By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/03 16:33:20 by hzhukov           #+#    #+#              #
-#    Updated: 2022/11/03 21:39:56 by hzhukov          ###   ########.fr        #
+#    Updated: 2022/11/06 23:29:23 by hzhukov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,12 @@ CC		= gcc
 AR		= ar rcs
 RM		= rm -rf
 
-SRC = ft_isalpha.c
+SRC = ft_isalpha.c \
+main.c \
 
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJ = $(BONUS_FILES:.c=.o)
+
 
 all: $(NAME)
 
@@ -39,4 +41,3 @@ fclean: clean
 re: fclean all
 
 .PHONY : all clean fclean re bonus
-
