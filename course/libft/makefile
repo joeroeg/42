@@ -6,7 +6,7 @@
 #    By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/03 16:33:20 by hzhukov           #+#    #+#              #
-#    Updated: 2022/11/08 19:36:03 by hzhukov          ###   ########.fr        #
+#    Updated: 2022/11/09 10:28:09 by hzhukov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,12 @@ AR		= ar rcs
 RM		= rm -rf
 
 SRC =	ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_strlen.c \
+		ft_memset.c \
 		main.c \
 
 OBJS = $(SRC:.c=.o)
