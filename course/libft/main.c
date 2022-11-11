@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:28:07 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/11/09 10:36:07 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/11/11 02:23:26 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,18 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 
-
 int	main(void)
+
+{
+	char	c;
+
+	c = '1';
+	ft_isalpha(c);
+	printf("%d", ft_isalpha(c));
+	return (0);
+}
+
+/*
 {
 	char	str[50];
 
@@ -31,7 +41,7 @@ int	main(void)
 	puts(str);
 	return (0);
 }
-
+*/
 
 /*
 {
