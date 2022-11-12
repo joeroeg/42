@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:28:07 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/11/11 02:23:26 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/11/12 17:51:41 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 {
 	char	c;
 
-	c = '1';
+	c = 'a';
 	ft_isalpha(c);
 	printf("%d", ft_isalpha(c));
 	return (0);
