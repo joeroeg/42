@@ -1,10 +1,4 @@
 # 42
-
-- [x] isalpha
-- [x] isdigit
-- [ ] isalnum
-
-
 Checklist
 makefile
 - in SRC should be the function name file
