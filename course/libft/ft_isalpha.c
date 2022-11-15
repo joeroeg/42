@@ -6,11 +6,11 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:50:12 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/11/12 18:02:05 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/11/15 15:59:17 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -21,10 +21,11 @@ int	ft_isalpha(int c)
 
 int	main(void)
 {
-	char	c;
+	int	c;
 
 	c = 'a';
 	ft_isalpha(c);
-	write(1, &ft_isalpha, 1000);
+	printf("%i", ft_isalpha);
 	return (0);
 }
+s

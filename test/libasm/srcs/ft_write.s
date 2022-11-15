@@ -5,14 +5,14 @@ segment .text
 
 _ft_write:
     mov		rax, 0x2000004	; write
-	syscall					; appel systeme (write)
-    jc		error			; si erreur, carry flag = 1
-	ret						; sort de la fonction
+	syscall					; system call (write)
+    jc		error			; if error, carry flag = 1
+	ret						; exits the function
 
 error:
-	push	rax				; sauvegarde le code d'erreur
-	call	___error		; recupere un pointeur sur errno
-	pop		r15				; recupere la valeur d'errno
-	mov		[rax], r15		; affecte le code d'erreur a errno
-	mov		rax, -1			; renvoie -1
+	push	rax				; saves the error code
+	call	___error		; retrieve a pointer to errno
+	pop		r15				; recover the value of errno
+	mov		[rax], r15		; assigns the error code to errno
+	mov		rax, -1			; returns -1
 	ret
