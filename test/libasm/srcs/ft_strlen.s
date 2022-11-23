@@ -3,13 +3,13 @@ segment	.text
 
 
 _ft_strlen:
-	mov	rax, 0				; initialise la taille de la chaine à 0
+	mov	rax, 0				; initialize the size of the string to 0
 
-w_loop: ; parcourt la chaîne passée en paramètre
-	cmp	byte [rdi + rax], 0	; compare le caractère de la chaine à la valeur ASCII '\0'
-	je	w_end				; sort de la boucle si égal
-	inc	rax					; incrémente la taille de la chaine
-	jmp	w_loop				; revient au début de la boucle
+w_loop: ; scans the string passed in parameter
+	cmp	byte [rdi + rax], 0	; compares the character of the string to the ASCII value '\0'.
+	je	w_end				; exits the loop if equal
+	inc	rax					; increments the size of the string
+	jmp	w_loop				; returns to the beginning of the loop
 
-w_end: ; fin boucle while
-	ret						; renvoie la longueur de la chaine (rax)
+w_end: ; end loop while
+	ret						; returns the length of the string (rax)

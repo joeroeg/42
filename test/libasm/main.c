@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamartin <mamartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 21:22:19 by mamartin          #+#    #+#             */
-/*   Updated: 2021/01/12 20:21:42 by mamartin         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:34:41 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int	main(int ac, char **av)
 	int		cmp;
 	int 	ret;
 	int		fd;
-	char	*dest;
-	char	*dup;
+	char	*dest;	char	*dup;
 	char	buffer[101];
 
 	/* FT_STRLEN */
@@ -34,6 +33,7 @@ int	main(int ac, char **av)
 	printf("length_src = %d\n", sz);
 	sz = strlen(av[1]);
 	printf("length_src = %d\n\n", sz);
+	
 
 	/* FT_STRCPY */
 	printf("\033[32;01m""=== FT_STRCPY ===\n""\033[00m");

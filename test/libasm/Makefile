@@ -2,7 +2,6 @@ NAME	= libasm.a
 SRC		= ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_strdup.s ft_read.s
 OBJ_DIR	= objs/
 OBJ		= ${addprefix ${OBJ_DIR}, ${SRC:.s=.o}}
-
 ${OBJ_DIR}%.o:srcs/%.s
 		nasm -f macho64 $< -o $@ 
 

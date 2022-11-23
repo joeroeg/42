@@ -5,14 +5,14 @@ segment .text
 
 _ft_read:
     mov 	rax, 0x2000003	; read
-	syscall					; appel systeme (read)
-    jc 		error			; si erreur, carry flag = 1
-	ret						; sort de la fonction
+	syscall					; system call (read)
+    jc 		error			; if error, carry flag = 1
+	ret						; exits the function
 
 error:
-	push	rax				; sauvegarde le code d'erreur
-	call 	___error		; recupere un pointeur sur errno
-	pop		r15				; recupere le code d'erreur
-	mov		[rax], r15		; affecte le code à errno
-	mov		rax, -1			; retourne -1
+	push	rax				; saves the error code
+	call 	___error		; retrieve a pointer to errno
+	pop		r15				; retrieve the error code
+	mov		[rax], r15		; assign the code to errno
+	mov		rax, -1			; returns -1
 	ret

@@ -16,3 +16,4 @@ error:
 	mov		[rax], r15		; assigns the error code to errno
 	mov		rax, -1			; returns -1
 	ret
+ 
