@@ -6,13 +6,24 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:50:12 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/11/15 18:01:56 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/04 20:32:27 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include	<stdio.h>
 
 int	ft_isalpha(int c)
 {
 	if ((c > 64 && c < 91) || (c > 96 && c <= 122))
 		return (1);
+	return (0);
+}
+
+int	main(void)
+{
+	char	c;
+
+	c = 'a';
+	printf("%d", ft_isalpha(c));
 	return (0);
 }

@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   isalpha.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 21:12:19 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/11/15 18:39:06 by hzhukov          ###   ########.fr       */
+/*   Created: 2022/12/04 20:20:23 by hzhukov           #+#    #+#             */
+/*   Updated: 2022/12/04 20:22:06 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include	<stdio.h>
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdint.h>
-# include <string.h>
+int	isalpha(c)
+	int c;
+{
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ? 1 : 0);
+}
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-size_t	ft_strlen(const char *s);
+int	main(void)
+{
+	char	c;
 
-#endif
+	c = 'a';
+	printf("%d", isalpha(c));
+	return (0);
+}
