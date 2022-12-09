@@ -19,8 +19,7 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 
-int	main(void)
-{
+//int	main(void) //strlen 
 	char	*str;
 	int	result;
 
@@ -29,6 +28,9 @@ int	main(void)
 	printf ("%d", result);
 	return (0);
 }
+//  int	main(void) //strcpy 
+{
+	char	str[50];
 
 
 
