@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 21:12:19 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/04 17:25:54 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/08 22:14:10 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stddef.h>
 # include <stdint.h>
 # include <string.h>
+# include <limits.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);

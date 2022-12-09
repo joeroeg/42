@@ -6,11 +6,11 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:25:41 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/11/15 21:48:35 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/08 21:15:21 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 void *memset(void *str, int c, size_t n)
 {

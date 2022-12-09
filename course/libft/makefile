@@ -1,22 +1,7 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/03 16:33:20 by hzhukov           #+#    #+#              #
-#    Updated: 2022/11/15 21:41:45 by hzhukov          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME	= libft.a
-OBJ_DIR	= objs/
-
-CFLAGS	= -Wall -Wextra -Werror
 CC		= gcc
-AR		= ar rcs
-RM		= rm -rf
+CFALGS	= -Wall -Wextra -Werror
+PFLAGS	= -iquote ../libft 
 
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
@@ -24,29 +9,55 @@ SRC =	ft_isalpha.c \
 		ft_isascii.c \
 		ft_isprint.c \
 		ft_strlen.c \
-		main.c \
 		#ft_memset.c \
+		#ft_bzero.c \
+		#ft_memcpy.c \
+		#ft_memmove \
+		#ft_strlcpy \
+		#ft_strlcat \
+		#ft_toupper \
+		#ft_tolower \
+		#ft_strchr \
+		#ft_strrchr \
+		#ft_strncmp \
+		#ft_memchr \
+		#ft_memcmp \
+		#ft_strnstr \
+		#ft_atoi \
+		#ft_calloc \
+		#ft_calloc \
+		#ft_substr \
+		#ft_strjoin \
+		#ft_strtrim \
+		#ft_split \
+		#ft_itoa \
+		#ft_strmapi \
+		#ft_striteri \
+		#ft_putchar_fd \
+		#ft_putstr_fd \
+		#ft_putendl_fd \
+		#ft_putnbr_fd \
 
-OBJS = $(SRC:.c=.o)
 
+OBJ_DIR	= objs/
+OBJ		= ${addprefix ${OBJ_DIR}, ${SRC:.c=.o}}
+${OBJ_DIR}%.o:srcs/%.c
+		gcc ${PFLAGS} ${CFALGS} -c $< -o $@ 
 
-#BONUS_OBJ = $(BONUS_FILES:.c=.o)
+${NAME}:${OBJ_DIR} ${OBJ}
+		ar -rcs $@ ${OBJ}
 
-all: $(NAME)
+${OBJ_DIR}:
+		mkdir -p ${OBJ_DIR}
 
-$(NAME): ;{OBJ_DIR} $(OBJS)
-	$(AR) $@ $(OBJS)
-
-#bonus:
-#	$(BONUS_OBJ) $(AR) $(NAME) $(BONUS_OBJ)
+all:	${NAME}
 
 clean:
-	$(RM) $(OBJ_DIR) 
-#$(BONUS_OBJ)
+		rm -rf ${OBJ_DIR}
 
-fclean: clean
-	$(RM) $(NAME)
+fclean:	clean
+		rm -rf ${NAME}
 
-re: fclean all
+re:		fclean all
 
-.PHONY : all clean fclean re bonus
+.PHONY: all clean fclean re

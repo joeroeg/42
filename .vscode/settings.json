@@ -4,5 +4,6 @@
 		"__locale": "c",
 		"libft.h": "c",
 		"unistd.h": "c"
-	}
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }
