@@ -22,7 +22,7 @@ int	main(void)
 {
 	char	c;
 
-	c = 'a';
+	c = '1';
 	printf("%d", isalpha(c));
 	return (0);
 }
