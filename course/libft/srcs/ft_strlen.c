@@ -14,10 +14,12 @@
 
 size_t ft_strlen(const char *str)
 {
-  char *char_ptr = str; // This line declares a pointer variable that points to the beginning of the input string
-  while(*char_ptr != '\0') // This line defines a loop that will keep running until the end of the string is reached
+  const char *ptr 
+  
+  ptr = str; // This line points to the beginning of the input string
+  while(*ptr != '\0') // This line defines a loop that will keep running until the end of the string is reached
   {
-	char_ptr++;
+	ptr++;
 	}
-	return (char_ptr - str); // This line subtracts the pointer at the start of the string from the pointer at the end of the string, giving us the length of the string
+	return (ptr - str); // This line subtracts the pointer at the start of the string from the pointer at the end of the string, giving us the length of the string
 }

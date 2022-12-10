@@ -1,40 +1,38 @@
-ft_isalpha:                             # @ft_isalpha
+ft_isalpha:
         push    rbp
         mov     rbp, rsp
-        mov     dword ptr [rbp - 8], edi
-        cmp     dword ptr [rbp - 8], 64
-        jle     .LBB0_2
-        cmp     dword ptr [rbp - 8], 91
-        jl      .LBB0_4
-.LBB0_2:
-        cmp     dword ptr [rbp - 8], 96
-        jle     .LBB0_5
-        cmp     dword ptr [rbp - 8], 122
-        jg      .LBB0_5
-.LBB0_4:
-        mov     dword ptr [rbp - 4], 1
-        jmp     .LBB0_6
-.LBB0_5:
-        mov     dword ptr [rbp - 4], 0
-.LBB0_6:
-        mov     eax, dword ptr [rbp - 4]
+        mov     DWORD PTR [rbp-4], edi
+        cmp     DWORD PTR [rbp-4], 64
+        jle     .L2
+        cmp     DWORD PTR [rbp-4], 90
+        jle     .L3
+.L2:
+        cmp     DWORD PTR [rbp-4], 96
+        jle     .L4
+        cmp     DWORD PTR [rbp-4], 122
+        jg      .L4
+.L3:
+        mov     eax, 1
+        jmp     .L5
+.L4:
+        mov     eax, 0
+.L5:
         pop     rbp
         ret
-main:                                   # @main
+.LC0:
+        .string "%d"
+main:
         push    rbp
         mov     rbp, rsp
         sub     rsp, 16
-        mov     dword ptr [rbp - 4], 0
-        mov     byte ptr [rbp - 5], 97
-        movsx   edi, byte ptr [rbp - 5]
+        mov     BYTE PTR [rbp-1], 49
+        movsx   eax, BYTE PTR [rbp-1]
+        mov     edi, eax
         call    ft_isalpha
         mov     esi, eax
-        lea     rdi, [rip + .L.str]
-        mov     al, 0
-        call    printf@PLT
-        xor     eax, eax
-        add     rsp, 16
-        pop     rbp
+        mov     edi, OFFSET FLAT:.LC0
+        mov     eax, 0
+        call    printf
+        mov     eax, 0
+        leave
         ret
-.L.str:
-        .asciz  "%d"
