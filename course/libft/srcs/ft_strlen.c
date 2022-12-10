@@ -14,9 +14,7 @@
 
 size_t ft_strlen(const char *str)
 {
-  const char *ptr 
-  
-  ptr = str; // This line points to the beginning of the input string
+  const char *ptr = str;
   while(*ptr != '\0') // This line defines a loop that will keep running until the end of the string is reached
   {
 	ptr++;
