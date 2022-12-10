@@ -18,3 +18,5 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+
+int	main(void) {char c = '1'; printf("%d", ft_isalpha(c)); 	return (0);}

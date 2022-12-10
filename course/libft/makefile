@@ -38,7 +38,6 @@ SRC =	ft_isalpha.c \
 		#ft_putendl_fd \
 		#ft_putnbr_fd \
 
-
 OBJ_DIR	= objs/
 OBJ		= ${addprefix ${OBJ_DIR}, ${SRC:.c=.o}}
 ${OBJ_DIR}%.o:srcs/%.c
