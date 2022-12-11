@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:28:07 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/08 22:53:16 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/11 12:23:05 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 
-// isalpha 
-int	main(void) {char c = '1'; printf("%d", ft_isalpha(c)); 	return (0);}
+// isalpha int	main(void) {char c = '1'; printf("%d", ft_isalpha(c)); 	return (0);}
 // isdigit int	main(void) {char c = 'a'; printf("%d", ft_isdigit(c)); 	return (0); }
 // isalnum int	main(void) {char c = 'a'; printf("%d", ft_isalnum(c)); 	return (0); }
 // strlen int	main(void) {char *str; int result; str = "Hello"; result = ft_strlen(str); printf ("%d", result); return (0); } 
