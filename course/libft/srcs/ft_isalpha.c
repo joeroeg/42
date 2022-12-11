@@ -6,11 +6,9 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:50:12 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/04 20:32:27 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/10 13:25:40 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include	<stdio.h>
 
 int	ft_isalpha(int c)
 {
@@ -18,5 +16,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-int	main(void) {char c = '1'; printf("%d", ft_isalpha(c)); 	return (0);}

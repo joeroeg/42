@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../glibc"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.c": "c",
+			"__locale": "c",
+			"libft.h": "c",
+			"unistd.h": "c"
+		}
+	}
+}
