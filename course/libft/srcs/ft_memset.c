@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:25:41 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/11 12:23:29 by marvin           ###   ########.fr       */
+/*   Updated: 2022/12/11 17:35:42 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,11 @@ Output:
 
 #include "libft.h"
 
-void *memset(void *str, int c, size_t n)
+void	*memset(void *str, int c, size_t n)
 {
+	char str[] = "almost every programmer should know memset!";
+	memset (str,'-',6);
+	puts (str);
+
 	return (0);
 }
