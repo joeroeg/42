@@ -11,6 +11,10 @@
 /* ************************************************************************** */
 
 /*
+
+
+Prototype: void *memset (void *__s, int __c, size_t __n)
+
 Parameters:
 str − This is a pointer to the block of memory to fill.
 c − This is the value to be set. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value.
@@ -39,11 +43,15 @@ Output:
 
 #include "libft.h"
 
-void	*memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	char str[] = "almost every programmer should know memset!";
-	memset (str,'-',6);
-	puts (str);
+  *str = "";
 
 	return (0);
 }
+
+
+
+/*
+1. Я не знаю могу ли поинтером указать на предложение в "" двойных скобах. насколько я понимаю то когда мы привязываем к поинтеру значение о указывает на адрес первого значения
+*/

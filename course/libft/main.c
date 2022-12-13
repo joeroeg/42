@@ -18,14 +18,27 @@ int	ft_isalnum(int c);
 int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
+void	ft_memset(void *str, int c, size_t n);
 
 
 // isalpha int	main(void) {char c = '1'; printf("%d", ft_isalpha(c)); 	return (0); }
 // isdigit int	main(void) {char c = 'a'; printf("%d", ft_isdigit(c)); 	return (0); }
 // isalnum int	main(void) {char c = '!'; printf("%d", ft_isalnum(c)); 	return (0); }
-// isascii 
-int	main(void) {char c = 'a'; printf("%d", ft_isascii(c)); 	return (0); }
+// isascii int	main(void) {int c = 1; printf("%d", ft_isascii(c)); 	return (0); }
 // isprint int	main(void) {char c = 'a'; printf("%d", ft_isprint(c)); 	return (0); }
 // strlen int	main(void) {char *str; int result; str = "Hello"; result = ft_strlen(str); printf ("%d", result); return (0); } 
-// strcpy int	main(void) {char str[50]; strcpy(str, "This is string.h library function"); puts(str); memset(str, '-', 7); puts(str); return (0); }
-// memset int main(void) {char str[50]}
+// strcpy 
+// memset
+
+
+int	main(void)
+{
+    char str[50];
+    strcpy(str, "This is string.h library function");
+    puts(str); 
+    memset(str, '-', 7);
+    puts(str); 
+    ft_memset(str, '-', 7);
+    puts(str);
+return (0);
+}
