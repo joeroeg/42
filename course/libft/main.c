@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:28:07 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/13 23:10:34 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/13 23:20:16 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,4 @@ void	*ft_memset(void *s, int c, size_t n);
 // isprint int	main(void){char c = 'a'; printf("%d", ft_isprint(c)); 	return (0); }
 // strlen int	main(void){char *str; int result; str = "Hello"; result = ft_strlen(str); printf ("%d", result); return (0); } 
 // strcpy int	main(void){char str[50]; strcpy(str, "This is string.h library function"); puts(str); memset(str, '-', 7); puts(str); return (0); }
-// memset 
-int main (void)
-{
-    char str1[] = "Fuck hello ft_memset";
-    char str2[] = "Fuck hello ft_memset";
-    ft_memset (str1, '-', 5);
-    memset (str2, '-', 5);
-    puts (str1);
-    puts (str2);
-    return (0);}
+// memset int	main (void){char str1[] = "Fuck hello ft_memset"; char str2[] = "Fuck hello ft_memset"; ft_memset (str1, '-', 5); puts (str1); memset (str2, '-', 5); puts (str2); return (0);}
