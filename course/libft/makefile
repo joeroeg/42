@@ -1,7 +1,7 @@
 NAME	= libft.a
 CC		= gcc
 CFALGS	= -Wall -Wextra -Werror
-PFLAGS	= -iquote ../libft 
+PFLAGS	= -iquote ../libft
 
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
@@ -9,7 +9,7 @@ SRC =	ft_isalpha.c \
 		ft_isascii.c \
 		ft_isprint.c \
 		ft_strlen.c \
-		#ft_memset.c \
+		ft_memset.c \
 		#ft_bzero.c \
 		#ft_memcpy.c \
 		#ft_memmove \

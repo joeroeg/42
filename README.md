@@ -39,3 +39,7 @@ MSVC x86
 Clang X86-64
 GCC x86-64
 
+
+1. uncomment ft_function in makefile
+2. add ft_function to main.c
+3. add ft_function to libft.h 

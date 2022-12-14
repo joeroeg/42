@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 21:12:19 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/11 17:38:17 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/13 20:04:10 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int	ft_isalnum(int c);
 int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
+void *ft_memset(void *str, int c, size_t n);
 
 #endif
