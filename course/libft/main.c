@@ -28,4 +28,14 @@ void	*ft_memset(void *s, int c, size_t n);
 // isprint int	main(void){char c = 'a'; printf("%d", ft_isprint(c)); 	return (0); }
 // strlen int	main(void){char *str; int result; str = "Hello"; result = ft_strlen(str); printf ("%d", result); return (0); } 
 // strcpy int	main(void){char str[50]; strcpy(str, "This is string.h library function"); puts(str); memset(str, '-', 7); puts(str); return (0); }
-// memset int	main (void){char str1[] = "Fuck hello ft_memset"; char str2[] = "Fuck hello ft_memset"; ft_memset (str1, '-', 5); puts (str1); memset (str2, '-', 5); puts (str2); return (0);}
+// memset 
+int	main (void)
+{
+    char str1[] = "Fuck hello ft_memset";
+    char str2[] = "Fuck hello memset";
+    ft_memset (str1, '-', 5);
+    puts (str1);
+    memset (str2, '-', 5);
+    puts (str2); 
+    return (0);
+}
