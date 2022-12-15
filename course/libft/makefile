@@ -10,7 +10,7 @@ SRC =	ft_isalpha.c \
 		ft_isprint.c \
 		ft_strlen.c \
 		ft_memset.c \
-		#ft_bzero.c \
+		ft_bzero.c \
 		#ft_memcpy.c \
 		#ft_memmove \
 		#ft_strlcpy \

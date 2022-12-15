@@ -21,6 +21,7 @@
 			"unistd.h": "c",
 			"string.h": "c",
 			"memcopy.h": "c"
-		}
+		},
+		"codechecker.backend.compilationDatabasePath": "/Users/hzhukov/Desktop/42/42.code-workspace"
 	}
 }

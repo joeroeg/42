@@ -3,7 +3,8 @@
 		"*.c": "c",
 		"__locale": "c",
 		"libft.h": "c",
-		"unistd.h": "c"
+		"unistd.h": "c",
+		"stdio.h": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
