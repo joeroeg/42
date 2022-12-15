@@ -6,13 +6,8 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:16:53 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/15 15:16:54 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/15 15:36:50 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-int main()
-{
-//code here
-return 0;
-}
+#include "libft.h"

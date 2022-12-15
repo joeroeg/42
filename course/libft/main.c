@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:28:07 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/15 15:22:43 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/15 15:33:56 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,10 @@ void ft_bzero(void *s, size_t n);
 // isprint int	main(void){char c = 'a'; printf("%d", ft_isprint(c)); 	return (0); }
 // strlen int	main(void){char *str; int result; str = "Hello"; result = ft_strlen(str); printf ("%d", result); return (0); } 
 // strcpy int	main(void){char str[50]; strcpy(str, "This is string.h library function"); puts(str); memset(str, '-', 7); puts(str); return (0); }
-// memset int	main (void){char str1[] = "Fuck hello ft_memset"; char str2[] = "Fuck hello memset"; ft_memset (str1, '-', 5); puts (str1); memset (str2, '-', 5); puts (str2); return (0); }
-// ft_bzero
-int main(void) 
-{ 
-	char str[] = "bzero"; 
-	ft_bzero(str, 4); 
-	printf("%s", str); 
-	return 0; 
-}
+// memset int	main (void){char str1[] = "Fuck hello ft_memset"; char str2[] = ".... hello memset"; ft_memset (str1, '-', 5); puts (str1); memset (str2, '-', 5); puts (str2); return (0); }
+// ft_bzero		int main(void){char str[] = "bzero"; ft_bzero(str, 4); printf("%s", str); return 0;} // я не понимаю почему значение 4 ничего не изменеяет
 // ft_memcpy 
+
 // ft_memmove 
 // ft_strlcpy 
 // ft_strlcat 
