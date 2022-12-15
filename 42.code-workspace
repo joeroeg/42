@@ -1,10 +1,16 @@
 {
 	"folders": [
 		{
+			"name": "42",
 			"path": "."
 		},
 		{
-			"path": "../../../Developer/C/glibc"
+			"name": "LibftASM",
+			"path": "../LibftASM"
+		},
+		{
+			"name": "glibc",
+			"path": "../!IN/glibc"
 		}
 	],
 	"settings": {
@@ -12,7 +18,9 @@
 			"*.c": "c",
 			"__locale": "c",
 			"libft.h": "c",
-			"unistd.h": "c"
+			"unistd.h": "c",
+			"string.h": "c",
+			"memcopy.h": "c"
 		}
 	}
 }
