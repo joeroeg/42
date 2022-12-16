@@ -45,6 +45,11 @@ int main ()
 Output:
 
 ------fool can write code that a computer can understand. Good programmers write code that humans can understand.
+
+
+The line (unsigned char *)s is a type cast to convert a variable from one type to another. In this case, it is converting the pointer s from void type to unsigned char type. 
+The line ptr[i++] = (unsigned char)c is used to assign the value of c (which is an integer) to the address pointed to by ptr.
+The i++ increments the value of i each time it is used so that it points to each byte in the array of characters.
 */
 
 #include "libft.h"
