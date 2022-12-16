@@ -6,7 +6,7 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:25:41 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/13 23:16:52 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/15 16:25:00 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Declaration:
 void *memset(void *str, int c, size_t n)
 
 Parameters:
-s − This is a pointer to the block of memory to fill.
+str − This is a pointer to the block of memory to fill.
 c − This is the value to be set. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value.
 n − This is the number of bytes to be set to the value.
 
