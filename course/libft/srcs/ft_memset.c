@@ -10,48 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-/*
-Description:
-Memset functions are used to fill a block of memory with a particular value. 
-They are used to set a certain amount of memory to 0, copy data from one location to another, as well as set a specific value for a given number of bytes.
-To reproduce the source code, you will need to understand how the memset function works, find the required parameters for the function, and then write the code using those parameters.
-
-
-Declaration:
-void *memset(void *str, int c, size_t n)
-
-Parameters:
-str − This is a pointer to the block of memory to fill.
-c − This is the value to be set. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value.
-n − This is the number of bytes to be set to the value.
-
-Return Value:
-This function returns a pointer to the memory area str.
-
-Example:
-#include <stdio.h>
-#include <string.h>
-
-int main ()
-{
-  char str[] = "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.";
-  memset (str,'-',5);
-  puts (str);
-  return 0;
-}
-
-Output:
-
-------fool can write code that a computer can understand. Good programmers write code that humans can understand.
-
-
-The line (unsigned char *)s is a type cast to convert a variable from one type to another. In this case, it is converting the pointer s from void type to unsigned char type. 
-The line ptr[i++] = (unsigned char)c is used to assign the value of c (which is an integer) to the address pointed to by ptr.
-The i++ increments the value of i each time it is used so that it points to each byte in the array of characters.
-*/
-
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -60,7 +18,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	unsigned char	*ptr;
 
 	i = 0;
-
 	ptr = (unsigned char *)s;
 	while (i < n)
 		ptr[i++] = (unsigned char)c;

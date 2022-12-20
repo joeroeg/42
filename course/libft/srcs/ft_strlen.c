@@ -12,12 +12,14 @@
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-  const char *ptr = str;
-  while(*ptr != '\0') // This line defines a loop that will keep running until the end of the string is reached
-  {
-	ptr++;
+	const char	*ptr;
+
+	ptr = str;
+	while (*ptr != '\0')
+	{
+		ptr++;
 	}
-	return (ptr - str); // This line subtracts the pointer at the start of the string from the pointer at the end of the string, giving us the length of the string
+	return (ptr - str);
 }
