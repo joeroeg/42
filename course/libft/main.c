@@ -23,7 +23,7 @@ void ft_bzero(void *s, size_t n);
 void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void ft_putchar_fd(char c, int fd);
 void *ft_memmove(void *dst, const void *src, size_t n);
-//size_t ft_strlcpy(char *dst, const char *src, size_t size); 
+size_t ft_strlcpy(char *dst, const char *src, size_t size); 
 //size_t ft_strlcat(char *dst, const char *src, size_t size); 
 //int ft_toupper(int c); 
 //int ft_tolower(int c); 
@@ -60,6 +60,7 @@ void *ft_memmove(void *dst, const void *src, size_t n);
 // ft_memcpy	int main(void){char src[] = "memcpy"; char src2[] = "ft_memcpy"; char dst[7]; printf("Destination before memcpy: %s\n", dst); memcpy(dst, src, sizeof(src)); printf("Destination after memcpy: %s\n", dst); ft_bzero(dst, sizeof(dst)); printf("Destination before ft_memcpy: %s\n", dst); ft_memcpy(dst, src2, sizeof(src2)); printf("Destination after ft_memcpy: %s\n", dst); return 0;}
 // ft_memmove	int main(int argc, char **argv) {    void * dst;    const void * src;    unsigned long len;    dst = argv[1];    src = argv[2];   puts("\n dst before"); puts(dst);  ft_memmove(dst, src, sizeof(src));	puts("\n dst after"); puts(dst);    return 0;}
 // ft_strlcpy 
+
 // ft_strlcat 
 // ft_toupper 
 // ft_tolower 
