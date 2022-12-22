@@ -59,8 +59,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size);
 // ft_bzero		int main(void){char str[] = "bzero"; ft_bzero(str, 4); printf("%s", str); return 0;} // я не понимаю почему значение 4 ничего не изменеяет
 // ft_memcpy	int main(void){char src[] = "memcpy"; char src2[] = "ft_memcpy"; char dst[7]; printf("Destination before memcpy: %s\n", dst); memcpy(dst, src, sizeof(src)); printf("Destination after memcpy: %s\n", dst); ft_bzero(dst, sizeof(dst)); printf("Destination before ft_memcpy: %s\n", dst); ft_memcpy(dst, src2, sizeof(src2)); printf("Destination after ft_memcpy: %s\n", dst); return 0;}
 // ft_memmove	int main(int argc, char **argv) {    void * dst;    const void * src;    unsigned long len;    dst = argv[1];    src = argv[2];   puts("\n dst before"); puts(dst);  ft_memmove(dst, src, sizeof(src));	puts("\n dst after"); puts(dst);    return 0;}
-// ft_strlcpy 
-
+// ft_strlcpy
 // ft_strlcat 
 // ft_toupper 
 // ft_tolower 

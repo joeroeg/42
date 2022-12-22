@@ -21,7 +21,14 @@
 			"unistd.h": "c",
 			"string.h": "c",
 			"memcopy.h": "c",
-			"stdio.h": "c"
+			"stdio.h": "c",
+			"math.h": "c",
+			"bitset": "c",
+			"functional": "c",
+			"iterator": "c",
+			"memory": "c",
+			"algorithm": "c",
+			"time.h": "c"
 		},
 		"codechecker.backend.compilationDatabasePath": "/Users/hzhukov/Desktop/42/42.code-workspace"
 	}
