@@ -1,17 +1,19 @@
 {
 	"configurations": [
 		
+		
 		{
 			"name": "(lldb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/projects/cryptography/a.out",
+			"program": "${workspaceFolder}/course/libft/a.out",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
 			"environment": [],
 			"externalConsole": false,
 			"MIMode": "lldb"
+			
 		},
 	]
 }

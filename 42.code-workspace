@@ -3,14 +3,6 @@
 		{
 			"name": "42",
 			"path": "."
-		},
-		{
-			"name": "LibftASM",
-			"path": "../LibftASM"
-		},
-		{
-			"name": "glibc",
-			"path": "../!IN/glibc"
 		}
 	],
 	"settings": {
@@ -28,7 +20,8 @@
 			"iterator": "c",
 			"memory": "c",
 			"algorithm": "c",
-			"time.h": "c"
+			"time.h": "c",
+			"sstream": "c"
 		},
 		"codechecker.backend.compilationDatabasePath": "/Users/hzhukov/Desktop/42/42.code-workspace"
 	}

@@ -23,7 +23,7 @@ void ft_bzero(void *s, size_t n);
 void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void ft_putchar_fd(char c, int fd);
 void *ft_memmove(void *dst, const void *src, size_t n);
-size_t ft_strlcpy(char *dst, const char *src, size_t size); 
+//size_t ft_strlcpy(char *dst, const char *src, size_t size); 
 //size_t ft_strlcat(char *dst, const char *src, size_t size); 
 //int ft_toupper(int c); 
 //int ft_tolower(int c); 
@@ -58,7 +58,43 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size);
 // memset int	main (void){char str1[] = "Fuck hello ft_memset"; char str2[] = ".... hello memset"; ft_memset (str1, '-', 5); puts (str1); memset (str2, '-', 5); puts (str2); return (0); }
 // ft_bzero		int main(void){char str[] = "bzero"; ft_bzero(str, 4); printf("%s", str); return 0;} // я не понимаю почему значение 4 ничего не изменеяет
 // ft_memcpy	int main(void){char src[] = "memcpy"; char src2[] = "ft_memcpy"; char dst[7]; printf("Destination before memcpy: %s\n", dst); memcpy(dst, src, sizeof(src)); printf("Destination after memcpy: %s\n", dst); ft_bzero(dst, sizeof(dst)); printf("Destination before ft_memcpy: %s\n", dst); ft_memcpy(dst, src2, sizeof(src2)); printf("Destination after ft_memcpy: %s\n", dst); return 0;}
-// ft_memmove	int main(int argc, char **argv) {    void * dst;    const void * src;    unsigned long len;    dst = argv[1];    src = argv[2];   puts("\n dst before"); puts(dst);  ft_memmove(dst, src, sizeof(src));	puts("\n dst after"); puts(dst);    return 0;}
+// ft_memmove	
+/*
+int main()
+{
+    char str1[] = "HelloWorld"; // Array of size 100
+    char str2[] = "World"; // Array of size 5
+  
+    puts("str1 before memmove ");
+    puts(str1);
+  
+    ft_memmove(str1, str2, sizeof(str2));
+  
+    puts("\nstr1 after memmove ");
+    puts(str1);
+  
+    return 0;
+}*/
+
+int main()
+{
+    char str[25] = "Learningisfun";
+    char *first, *second;
+    first = str;
+    second = str;
+    printf("Original string:%s\n ", str);
+
+    //// when overlap happens then it just ignore it
+    //memcpy(first + 8, first, 10);
+    //printf("memcpy overlap: %s\n ", str);
+
+    // when overlap it start from first position
+    memmove(second + 8, first, 10);
+    printf("memmove overlap: %s\n ", str);
+
+    return 0;
+}
+
 // ft_strlcpy
 // ft_strlcat 
 // ft_toupper 
