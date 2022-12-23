@@ -78,20 +78,18 @@ int main()
 
 int main()
 {
-    char str[25] = "Learningisfun";
-    char *first, *second;
-    first = str;
-    second = str;
-    printf("Original string:%s\n ", str);
+    char str1[15] = "123456789";
+	char str2[15] = "123456789";
+    printf("origin string: %s\n", str1);
+	printf("origin string: %s\n", str2);
 
     //// when overlap happens then it just ignore it
-    //memcpy(first + 8, first, 10);
-    //printf("memcpy overlap: %s\n ", str);
+    memcpy(str1 + 2, str1, 4);
+    printf("mcpy overlap:  %s\n", str1);
 
     // when overlap it start from first position
-    memmove(second + 8, first, 10);
-    printf("memmove overlap: %s\n ", str);
-
+    memmove(str2 + 2, str2, 4);
+    printf("move overlap:  %s\n", str2);
     return 0;
 }
 
