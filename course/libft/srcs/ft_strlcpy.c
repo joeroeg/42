@@ -23,6 +23,15 @@ Without the null terminator, the functions may not be able to determine where th
 By implementing the null terminator in the strlcpy function, it ensures that the strings remain properly terminated and that any system errors are avoided.
 
 
+Also I added 
+	if (dstsize == 0)
+		return (srclen);
+
+it is used to check if the destination buffer size is 0. 
+If it is, then the function should return the length of the source string without copying any data. 
+This is useful if you want to know the length of a string without actually copying it into a buffer. 
+Returning the length of the string allows to determine the size without having to copy it.
+
 We need to  calculate the source string length
 Copy the source string
 Copy a truncated version
@@ -32,17 +41,14 @@ Return the length of the source string
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-   
-    size_t srclen;
-	
-	srclen = ft_strlen(src);
+	size_t srclen;
 
+	srclen = ft_strlen(src);
+	
 	if (!dst || !src)
 		return (0);
-		    if (dstsize == 0)
-			{
-				return (srclen);
-			}
+	if (dstsize == 0)
+		return (srclen);
     if (srclen < dstsize)
 	{
         ft_memmove(dst, src, srclen + 1);
@@ -55,3 +61,4 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
     }
     return (srclen);
 }
+
