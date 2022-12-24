@@ -64,7 +64,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 int main() 
 { 
-    char str_src[6] = "hello\0"; 
+    char str_src[6] = "hello"; 
     char str_dst[6]; 
     size_t len; 
   
