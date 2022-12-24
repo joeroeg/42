@@ -33,8 +33,18 @@ float* y = new float(5.5);
 int* i = (int*) y; 
 This statement casts the float pointer y to an int pointer and assigns it to the variable i.
 
-It's important that typecasting should be used with caution as it can result in unintended side effects. For example, if an integer is casted to a float and the resulting float is outside of the range of the original integer type, the resulting data may be incorrect. Additionally, typecasting between pointer types is also unsafe and can lead to unexpected behavior.
+It's important that typecasting should be used with caution as it can result in unintended side effects. 
+For example, if an integer is casted to a float and the resulting float is outside of the range of the original integer type, the resulting data may be incorrect. 
+Additionally, typecasting between pointer types is also unsafe and can lead to unexpected behavior.
 
+When we use !src and !std it means that the pointer does not point to any existing or accessible memory location. it's better to use to simplify your code and do not create extra nests.
+
+
+Sometimes people use return(dst) - it is not appropriate to return (dst) because the memory movement operation has not been completed yet. 
+This would lead to an inconsistent result, as the destination address would have been returned before the data is moved over. 
+It is better to return NULL to indicate that the operation has failed.
+Sometimes the data from the source may not have been correctly transferred to the destination. 
+This could happen if the memory movement operation is interrupted before completing, resulting in inconsistent data in the destination.
 */
 #include "libft.h"
 

@@ -27,7 +27,22 @@ for (int i = 0; i < len; i++) {
 the difference between NULL and 0. NULL is a pointer that points to nothing, while 0 is the numerical value of 0. In the code, returning NULL indicates that the operation has failed, while returning 0 indicates that the operation was successful.
 
 Problems:
-I do not understand why memmove() is better than memcpy() when addresses overlap. 
+I do not understand why memmove() is better than memcpy() when addresses overlap. Moreover I hane inconsisten results with original functions. but unit test passes
+joe@joe:~/Desktop/42/course/libft$ gcc main.c libft.a && ./a.out
+origin string: 123456789
+origin string: 123456789
+mcpy overlap:  11111111111113456789
+move overlap:  1113456789
+*** stack smashing detected ***: terminated
+Aborted (core dumped)
+joe@joe:~/Desktop/42/course/libft$ gcc main.c libft.a && ./a.out
+origin string: 123456789
+origin string: 123456789
+mcpy overlap:  1123456789
+move overlap:  
+*** stack smashing detected ***: terminated
+Aborted (core dumped)
+
 */
 #include "libft.h"
 
