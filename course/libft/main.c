@@ -59,7 +59,8 @@ void *ft_memmove(void *dst, const void *src, size_t n);
 // ft_bzero		int main(void){char str[] = "bzero"; ft_bzero(str, 4); printf("%s", str); return 0;} // я не понимаю почему значение 4 ничего не изменеяет
 // ft_memcpy	int main(void){char src[] = "memcpy"; char src2[] = "ft_memcpy"; char dst[7]; printf("Destination before memcpy: %s\n", dst); memcpy(dst, src, sizeof(src)); printf("Destination after memcpy: %s\n", dst); ft_bzero(dst, sizeof(dst)); printf("Destination before ft_memcpy: %s\n", dst); ft_memcpy(dst, src2, sizeof(src2)); printf("Destination after ft_memcpy: %s\n", dst); return 0;}
 // ft_memmove	int main(){    char str1[11] = "123456789";	char str2[11] = "123456789";    printf("origin string: %s\n", str1);	printf("origin string: %s\n", str2);    //// when overlap happens then it just ignore it    ft_memcpy(str1 + 1, str1, sizeof(int)*3);    printf("mcpy overlap:  %s\n", str1);    // when overlap it start from first position    ft_memmove(str2 + 1, str2, sizeof(int)*3);    printf("move overlap:  %s\n", str2);    return 0;}
-// ft_strlcpy
+// 
+ft_strlcpy
 // ft_strlcat 
 // ft_toupper 
 // ft_tolower 
