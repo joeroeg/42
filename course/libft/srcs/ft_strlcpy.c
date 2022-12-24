@@ -33,11 +33,22 @@ Return the length of the source string
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
    
-    size_t srclen = ft_strlen(src);
-    if (srclen < dstsize) {
+    size_t srclen;
+	
+	srclen = ft_strlen(src);
+
+	if (!dst || !src)
+		return (0);
+		    if (dstsize == 0)
+			{
+				return (srclen);
+			}
+    if (srclen < dstsize)
+	{
         ft_memmove(dst, src, srclen + 1);
     }
-    else {
+    else
+	{
         
         ft_memmove(dst, src, dstsize - 1);
         dst[dstsize - 1] = '\0';
