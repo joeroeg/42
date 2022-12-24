@@ -10,6 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+/*
+The notation used in the first while loop, *(d + len) = *(s + len);, assigns the characters from the source 's' to the destination 'd' in reverse order starting from the end of the arrays. The notation used in the second while loop, *(d++) = *(s++);, assigns the characters from the source 's' to the destination 'd' in the same order starting from index 0. This is done to avoid any overlapping of the data being copied which could lead to unexpected results.
+
+Also I can use this notation
+for (int i = len - 1; i >= 0; i--) {
+    d[i] = s[i];
+}
+
+Second While loop:
+for (int i = 0; i < len; i++) {
+    d[i] = s[i];
+}
+
+the difference between NULL and 0. NULL is a pointer that points to nothing, while 0 is the numerical value of 0. In the code, returning NULL indicates that the operation has failed, while returning 0 indicates that the operation was successful.
+
+Problems:
+I do not understand why memmove() is better than memcpy() when addresses overlap. 
+*/
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
