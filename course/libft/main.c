@@ -27,7 +27,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t ft_strlcat(char *dst, const char *src, size_t size); 
 int ft_toupper(int c);
 int ft_tolower(int c);
-//char *ft_strchr(const char *s, int c); 
+char *ft_strchr(const char *s, int c); 
 //char *ft_strrchr(const char *s, int c); 
 //int ft_strncmp(const char *s1, const char *s2, size_t n);
 //void *ft_memchr(const void *s, int c, size_t n); 
@@ -63,7 +63,7 @@ int ft_tolower(int c);
 // ft_strlcat	int main() {     char src[50] = "";     char dest[50] = "Hello";     size_t dstsize = 0;     printf("%lu\n", ft_strlcat(dest, src, dstsize));     return 0;}
 // ft_toupper	int main(int argc, char **argv) {    char c;    printf("Please enter a character: \n");    scanf("%c", &c);    c = ft_toupper(c);    printf("The uppercase version is: %c \n", c);}
 // ft_tolower 	int main(int argc, char **argv) {    char c;    printf("Please enter a character: \n");    scanf("%c", &c);    c = ft_tolower(c);    printf("The lowerrcase version is: %c \n", c);}
-// ft_strchr 
+// ft_strchr	int main() {  char string[] = "This is a sample string";  char ch = 's';  char *ptr = ft_strchr(string, ch);  printf("original string: %s \n", string);  printf("after first letter |%c| in the original string output is the rest of a string |%s|\n", ch, ptr);  return 0;}
 // ft_strrchr 
 // ft_strncmp 
 // ft_memchr 
