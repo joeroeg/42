@@ -35,7 +35,7 @@ This is important when dealing with strings, as it can lead to unexpected and un
 Strlcpy() and strlcat() make this process easier, as they return the total length of the combined strings. By comparing this number to the limit of the destination buffer, it is possible to detect if any characters have been cut off.
 
 problems:
-- I do not really understand why this solution does not pass unistd test so I live original implementation. libsdm
+- I do not really understand why this solution does not pass unistd test. I left original implementation from libsdm
 size_t ft_strlcat(char *dst, char const *src, size_t size)
 {
 	size_t len_dst = ft_strlen(dst);
