@@ -22,7 +22,8 @@ This means that for strlcpy() src must be NUL-terminated and for strlcat() both 
 
 Return values:
 The strlcpy() and strlcat() functions return the total length of the string they tried to create. 
-For strlcat() that means the initial length of dst plus the length of src. While this may seem somewhat confusing, it was done to make truncation detection simple.
+For strlcat() that means the initial length of dst plus the length of src. 
+While this may seem somewhat confusing, it was done to make truncation detection simple.
 
 
 Extra info:
@@ -35,6 +36,8 @@ size_t ft_strlcat(char *dst, char const *src, size_t size)
 {
 	size_t len_dst = strlen(dst);
 	size_t len_src = strlen(src);
+	if (!dst || !src)
+		return (0);
 	if (len_dst >= size)
 		return len_src + size;
 	if (len_src < size - len_dst)
