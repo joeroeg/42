@@ -23,14 +23,11 @@ Without the null terminator, the functions may not be able to determine where th
 By implementing the null terminator in the strlcpy function, it ensures that the strings remain properly terminated and that any system errors are avoided.
 
 
-Also I added 
 	if (dstsize == 0)
 		return (srclen);
-
 it is used to check if the destination buffer size is 0. 
 If it is, then the function should return the length of the source string without copying any data. 
-This is useful if you want to know the length of a string without actually copying it into a buffer. 
-Returning the length of the string allows to determine the size without having to copy it.
+This is useful if you want to know the length of a string without actually copying it into a buffer it allows to determine the size without having to copy it.
 
 We need to  calculate the source string length
 Copy the source string
