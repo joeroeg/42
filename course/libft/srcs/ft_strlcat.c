@@ -13,6 +13,9 @@
 #include "libft.h"
 
 /*
+
+Header: you need to use external library libbsd
+
 Description:
 The strlcat function should take a destination string, as well as a source string, and combine the two.
 The size of the destination buffer should also be provided, in order to ensure that the combined strings do not exceed the size of the buffer.
