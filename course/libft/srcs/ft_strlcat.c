@@ -31,19 +31,46 @@ Truncation detection is the process of detecting when a string has been truncate
 This is important when dealing with strings, as it can lead to unexpected and undesirable behavior.
 Strlcpy() and strlcat() make this process easier, as they return the total length of the combined strings. By comparing this number to the limit of the destination buffer, it is possible to detect if any characters have been cut off.
 */
-
+/*
 size_t ft_strlcat(char *dst, char const *src, size_t size)
 {
-	size_t len_dst = strlen(dst);
-	size_t len_src = strlen(src);
+	size_t len_dst = ft_strlen(dst);
+	size_t len_src = ft_strlen(src);
 	if (!dst || !src)
 		return (0);
 	if (len_dst >= size)
-		return len_src + size;
+		return (0);
 	if (len_src < size - len_dst)
-		ft_memcpy(dst + len_dst, src, len_src + 1);
+		ft_memmove(dst + len_dst, src, len_src + 1);
 		else
-		ft_memcpy(dst + len_dst, src, size - len_dst - 1);
+		ft_memmove(dst + len_dst, src, size - len_dst - 1);
 		dst[size - 1] = '\0';
 	return (len_dst + len_src);
+}
+*/
+
+size_t ft_strlcat(char *dst, const char *src, size_t dsize)
+{
+	const char *odst = dst;
+	const char *osrc = src;
+	size_t n = dsize;
+	size_t dlen;
+
+	while (n-- != 0 && *dst != '\0')
+		dst++;
+	dlen = dst - odst;
+	n = dsize - dlen;
+
+	if (n-- == 0)
+		return(dlen + strlen(src));
+	while (*src != '\0') {
+		if (n != 0) {
+			*dst++ = *src;
+			n--;
+		}
+		src++;
+	}
+	*dst = '\0';
+
+	return(dlen + (src - osrc));
 }
