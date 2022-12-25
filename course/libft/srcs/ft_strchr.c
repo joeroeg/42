@@ -32,14 +32,17 @@ Exatra information:
 An important thing to note is that strchr does not distinguish between upper and lower case characters. So if you are looking for the letter ‘s’, it will find both the upper and lower case versions in the string. 
 
 Implementation:
-1. increment looping through the characters in the string, one by one, until it finds the character that is being searched for
-2. expression *s != (char)c to check if the current character is equal to the target character. 
+- Loop through the characters in the string, one by one, until it finds the character that is being searched for. 
+- The loop uses the expression *s != (char)c to check if the current character is equal to the target character. 
+- If the character is not found, then the expression if (!*s++) is used to check if the character pointed to by s is equal to the null character. 
+- If it is, then the function returns 0. 
+- Otherwise, it continues to loop until the target character is found. 
 
 */
 char *ft_strchr(const char *s, int c)
 {
-  while (*s != (char)c)
+  while (*s != c)
     if (!*s++)
-      return 0;
+      return (0);
   return (char *)s;
 }
