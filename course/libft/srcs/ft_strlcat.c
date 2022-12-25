@@ -31,12 +31,12 @@ Truncation detection is the process of detecting when a string has been truncate
 This is important when dealing with strings, as it can lead to unexpected and undesirable behavior.
 Strlcpy() and strlcat() make this process easier, as they return the total length of the combined strings. By comparing this number to the limit of the destination buffer, it is possible to detect if any characters have been cut off.
 */
-/*
+
 size_t ft_strlcat(char *dst, char const *src, size_t size)
 {
 	size_t len_dst = ft_strlen(dst);
 	size_t len_src = ft_strlen(src);
-	if (!dst || !src)
+	if (dst == NULL || src == NULL)
 		return (0);
 	if (len_dst >= size)
 		return (0);
@@ -47,8 +47,8 @@ size_t ft_strlcat(char *dst, char const *src, size_t size)
 		dst[size - 1] = '\0';
 	return (len_dst + len_src);
 }
-*/
 
+/*
 size_t ft_strlcat(char *dst, const char *src, size_t dsize)
 {
 	const char *odst = dst;
@@ -74,3 +74,4 @@ size_t ft_strlcat(char *dst, const char *src, size_t dsize)
 
 	return(dlen + (src - osrc));
 }
+*/

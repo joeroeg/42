@@ -64,8 +64,8 @@ size_t ft_strlcat(char *dst, const char *src, size_t size);
 
 int main() {
      char src[50] = "";
-     char dest[50] = "";
-     size_t dstsize = 50;
+     char dest[50] = "Hello";
+     size_t dstsize = 0;
 
      printf("%lu\n", ft_strlcat(dest, src, dstsize));
 
