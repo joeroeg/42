@@ -28,8 +28,9 @@ char *ptr = strchr(string, ch);
 
 printf("String after |%c| is - |%s|\n", ch, ptr);
 
-Exatra information:
-An important thing to note is that strchr does not distinguish between upper and lower case characters. So if you are looking for the letter ‘s’, it will find both the upper and lower case versions in the string. 
+Extra information:
+An important thing to note is that strchr does not distinguish between upper and lower case characters.
+So if you are looking for the letter ‘s’, it will find both the upper and lower case versions in the string. 
 
 Implementation:
 - Loop through the characters in the string, one by one, until it finds the character that is being searched for. 
