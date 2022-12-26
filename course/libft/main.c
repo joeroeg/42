@@ -64,7 +64,8 @@ char *ft_strrchr(const char *s, int c);
 // ft_toupper	int main(int argc, char **argv) {    char c;    printf("Please enter a character: \n");    scanf("%c", &c);    c = ft_toupper(c);    printf("The uppercase version is: %c \n", c);}
 // ft_tolower 	int main(int argc, char **argv) {    char c;    printf("Please enter a character: \n");    scanf("%c", &c);    c = ft_tolower(c);    printf("The lowerrcase version is: %c \n", c);}
 // ft_strchr	int main() {  char string[] = "This is a sample string";  char ch = 'S';  char *ptr = ft_strchr(string, ch);  printf("original string: %s \n", string);  printf("after first letter |%c| in the original string output is the rest of a string |%s|\n", ch, ptr);  return 0;}
-// ft_strrchr 	int main() {    char string[] = "This is a string";    char ch = 's'; // case sensitive    char *result;    result = ft_strrchr(string, ch);    printf("%s\n", result);    return 0;}
+// ft_strrchr 	
+int main() {    char string[] = "This is a string";    char ch = '\0'; char *result;    result = ft_strrchr(string, ch);    printf("%s\n", result);    return 0;}
 // ft_strncmp 
 // ft_memchr 
 // ft_memcmp 

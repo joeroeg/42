@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
+//#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 /*
 The strrchr() function returns a pointer to the last occurrence of the character c in the string str. 
@@ -21,8 +22,10 @@ It is important to note that this function is case-sensitive i.e. if you are loo
 */
 char *ft_strrchr(const char *str, int c)
 {
-    const char *last = (NULL);
+    const char *last = NULL;
 
+	if(c == '\0')
+		return ((void*)0);
     while (*str)
 	{
         if (*str == c)
@@ -32,3 +35,5 @@ char *ft_strrchr(const char *str, int c)
 
     return (char *) last;
 }
+
+int main() {    char string[] = "This is a string";    char ch = 's'; char *result;    result = strrchr(string, ch);    printf("%s\n", result);    return 0;}
