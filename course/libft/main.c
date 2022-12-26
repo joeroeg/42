@@ -29,7 +29,7 @@ int ft_toupper(int c);
 int ft_tolower(int c);
 char *ft_strchr(const char *s, int c); 
 char *ft_strrchr(const char *s, int c); 
-//int ft_strncmp(const char *s1, const char *s2, size_t n);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 //void *ft_memchr(const void *s, int c, size_t n); 
 //int ft_memcmp(const void *s1, const void *s2, size_t n); 
 //char *ft_strnstr(const char *haystack, const char *needle, size_t len);
@@ -64,9 +64,31 @@ char *ft_strrchr(const char *s, int c);
 // ft_toupper	int main(int argc, char **argv) {    char c;    printf("Please enter a character: \n");    scanf("%c", &c);    c = ft_toupper(c);    printf("The uppercase version is: %c \n", c);}
 // ft_tolower 	int main(int argc, char **argv) {    char c;    printf("Please enter a character: \n");    scanf("%c", &c);    c = ft_tolower(c);    printf("The lowerrcase version is: %c \n", c);}
 // ft_strchr	int main() {  char string[] = "This is a sample string";  char ch = 'S';  char *ptr = ft_strchr(string, ch);  printf("original string: %s \n", string);  printf("after first letter |%c| in the original string output is the rest of a string |%s|\n", ch, ptr);  return 0;}
-// ft_strrchr 	
-int main() {    char string[] = "This is a string";    char ch = 's'; char *result;    result = ft_strrchr(string, ch);    printf("%s\n", result);    return 0;}
+// ft_strrchr 	int main() {    char string[] = "This is a string";    char ch = 's'; char *result;    result = ft_strrchr(string, ch);    printf("%s\n", result);    return 0;}
 // ft_strncmp 
+int main() 
+{
+    int result;
+    const char str1[] = "abcdef";
+    const char str2[] = "abcdEf";
+ 
+    result = ft_strncmp(str1, str2, 5);
+ 
+    if ( result < 0 ) 
+    {
+        printf("str1 is less than str2\n");
+    } 
+    else if ( result > 0 ) 
+    {
+        printf("str2 is less than str1\n");
+    } 
+    else 
+    {
+        printf("str1 is equal to str2\n");
+    }
+ 
+    return 0;
+}
 // ft_memchr 
 // ft_memcmp 
 // ft_strnstr 
