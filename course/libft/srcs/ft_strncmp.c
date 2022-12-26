@@ -20,9 +20,9 @@ Also, the comparison is case sensitive.
 The strncmp() function is declared in string.h header file. 
 
 Parameters:
-str1 - This is the first string that is to be compared.
+s1 - This is the first string that is to be compared.
 
-str2 - This is the second string that is to be compared.
+s2 - This is the second string that is to be compared.
 
 n - This is the maximum number of characters to be compared.
 
