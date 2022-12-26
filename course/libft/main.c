@@ -66,21 +66,20 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 // ft_strchr	int main() {  char string[] = "This is a sample string";  char ch = 'S';  char *ptr = ft_strchr(string, ch);  printf("original string: %s \n", string);  printf("after first letter |%c| in the original string output is the rest of a string |%s|\n", ch, ptr);  return 0;}
 // ft_strrchr 	int main() {    char string[] = "This is a string";    char ch = 's'; char *result;    result = ft_strrchr(string, ch);    printf("%s\n", result);    return 0;}
 // ft_strncmp	int main() {    int result;    const char str1[] = "abcdef";    const char str2[] = "abcdefghijklmnop";     result = ft_strncmp(str1, str2, 6);     if ( result < 0 )     {        printf("str1 is less than str2\n");    }     else if ( result > 0 )     {        printf("str2 is less than str1\n");    }     else     {        printf("str1 is equal to str2\n");    }     return 0;}
-// ft_memchr
-int main(void)
-{
-    char str[] = "This is a sample string";
-    char * pch;
-    printf ("Looking for the 's' character in \"%s\"...\n",str);
-    pch=ft_memchr(str,'s',ft_strlen(str));
-    while (pch!=NULL)
-    {
-        printf ("found at %ld\n",pch-str+1);
-        pch=ft_memchr(pch+1,'s', ft_strlen(pch+1));
-    }
-    return 0;
+// ft_memchr	int main(void){    char str[] = "This is a sample string";    char * pch;    printf ("Looking for the 's' character in \"%s\"...\n",str);    pch=ft_memchr(str,'s',ft_strlen(str));    while (pch!=NULL)    {        printf ("found at %ld\n",pch-str+1);        pch=ft_memchr(pch+1,'s', ft_strlen(pch+1));    }    return 0;}
+// ft_memcmp	
+int main(void) 
+{ 
+    // define two blocks of memory 
+    char str1[] = "abcdef"; 
+    char str2[] = "abcdez"; 
+  
+    int result; 
+    result = ft_memcmp(str1, str2, 6);
+    printf("result : %d\n", result);
+
+    return 0; 
 }
-// ft_memcmp 
 // ft_strnstr 
 // ft_atoi 
 // ft_calloc 
