@@ -39,6 +39,25 @@ Tools and Techniques:
 • Array indexing - this can be used to access individual elements for comparison.
 
 Alternative implementation:
+
+int ft_memcmp (const void *str1, const void *str2, size_t count)
+{
+  register const unsigned char *s1 = (const unsigned char*)str1;
+  register const unsigned char *s2 = (const unsigned char*)str2;
+
+  while (count-- > 0)
+    {
+      if (*s1++ != *s2++)
+	  return s1[-1] < s2[-1] ? -1 : 1;
+    }
+  return 0;
+}
+
+found solution on github library
+- '?' symbol is known as the ternary operator in C, and it is used as a shorthand for an if-else statement. In this case, the ternary operator is used to check if the current character in the first memory block (s1[-1]) is lexically smaller than the current character in the second memory block (s2[-1]). If it is, then the function returns -1; otherwise, the function returns 1.
+- register The 'register' keyword is used in this line of code to indicate that the variable 's1' should be stored in a register instead of in main memory. This can help improve performance, as register variables are typically accessed faster than variables stored in main memory.
+*/
+
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
     unsigned char *str1;
@@ -54,22 +73,4 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
         str2++;
     }
     return (0);
-}
-
-
-found solution on github library
-- '?' symbol is known as the ternary operator in C, and it is used as a shorthand for an if-else statement. In this case, the ternary operator is used to check if the current character in the first memory block (s1[-1]) is lexically smaller than the current character in the second memory block (s2[-1]). If it is, then the function returns -1; otherwise, the function returns 1.
-- register The 'register' keyword is used in this line of code to indicate that the variable 's1' should be stored in a register instead of in main memory. This can help improve performance, as register variables are typically accessed faster than variables stored in main memory.
-*/
-int ft_memcmp (const void *str1, const void *str2, size_t count)
-{
-  register const unsigned char *s1 = (const unsigned char*)str1;
-  register const unsigned char *s2 = (const unsigned char*)str2;
-
-  while (count-- > 0)
-    {
-      if (*s1++ != *s2++)
-	  return s1[-1] < s2[-1] ? -1 : 1;
-    }
-  return 0;
 }
