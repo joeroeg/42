@@ -13,8 +13,11 @@
 #include "libft.h"
 
 /*
-The strncmp() function is used to compare two strings up to a specified number of characters. It works in the same way as strcmp(), but only compares the first (at most) n bytes of s1 and s2. 
-It is important to note that a null character is not compared. Also, the comparison is case sensitive. The strncmp() function is declared in string.h header file. 
+The strncmp() is used to compare two strings up to a specified number of characters. 
+It works in the same way as strcmp(), but only compares the first (at most) n bytes of s1 and s2.
+It is important to note that a null character is not compared. 
+Also, the comparison is case sensitive. 
+The strncmp() function is declared in string.h header file. 
 
 Parameters:
 str1 - This is the first string that is to be compared.
@@ -45,18 +48,21 @@ int ft_strncmp(const char *str1, const char *str2, size_t n)
         return (*(unsigned char *)str1 - *(unsigned char *)str2);
     }
 }
+    if (n==0 || *str1=='\0' || *str2=='\0') {
+        return 0;
+    }
 
 */
 
 int ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-    while (n-- && *str1 && (*str1 == *str2)) 
-    {
-        ++str1;
-        ++str2;
-    }
-    if (n==0 || *str1=='\0' || *str2=='\0') {
+	size_t i = 0;
+    while (i < n && str1[i] && (str1[i] == str2[i])) 
+	i++;
+    if (i == n || str1[i] == str2[i]) 
         return 0;
-    }
-    return *(unsigned char *)str1 - *(unsigned char *)str2;
+    else if (str1[i] < str2[i]) 
+        return -1;
+    else
+        return 1;
 }
