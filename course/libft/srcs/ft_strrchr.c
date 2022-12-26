@@ -23,23 +23,23 @@ It searches for the last occurrence of character c in the string str. If it find
 The search begins at the end of the string and progresses backward through successive elements until either c is found or no more characters remain in the string.
 If c is '\0', this function will return a pointer to the null-terminator located at the end of str.
 
-The const char *last = (NULL) is used to store the pointer to the last occurrence of character c in the string str.
+*last = (NULL) is used to store the pointer to the last occurrence of character c in the string str.
 If no occurrences of character c are found, then this variable will remain NULL and indicate that no matches were found.
 
 */
 
 char *ft_strrchr(const char *str, int c)
 {
-    const char *last = (NULL);
+    const char *ptrs = (NULL);
 
     while (*str)
 	{
         if (*str == c)
-            last = str;
+            ptrs = str;
         str++;
     }
 	if (!c)
 		return (char *) str;
 
-    return (char *) last;
+    return (char *) ptrs;
 }
