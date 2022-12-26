@@ -70,7 +70,7 @@ int main()
 {
     int result;
     const char str1[] = "abcdef";
-    const char str2[] = "abcdEf";
+    const char str2[] = "abcdefghiklmnop";
  
     result = ft_strncmp(str1, str2, 5);
  
