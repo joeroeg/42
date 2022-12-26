@@ -29,40 +29,18 @@ n - This is the maximum number of characters to be compared.
 Return Value:
 This function returns an integer less than, equal to, or greater than zero if str1 is found, respectively, to be less than, to match, or be greater than str2.
 
-first test:
-int ft_strncmp(const char *str1, const char *str2, size_t n) 
-{
-    while (n && *str1 && (*str1 == *str2)) 
-    {
-        ++str1;
-        ++str2;
-        --n;
-    }
- 
-    if (n == 0) 
-    {
-        return 0;
-    }
-    else 
-    {
-        return (*(unsigned char *)str1 - *(unsigned char *)str2);
-    }
-}
-    if (n==0 || *str1=='\0' || *str2=='\0') {
-        return 0;
-    }
-
 */
 
-int ft_strncmp(const char *str1, const char *str2, size_t n)
-{
-	size_t i = 0;
-    while (i < n && str1[i] && (str1[i] == str2[i])) 
-	i++;
-    if (i == n || str1[i] == str2[i]) 
-        return 0;
-    else if (str1[i] < str2[i]) 
-        return -1;
-    else
-        return 1;
+int ft_strncmp(const char *s1, const char *s2, size_t n) 
+{ 
+    if (n == 0) 
+        return 0; 
+
+    while (n-- > 1 && *s1 && *s1 == *s2) 
+    { 
+        s1++; 
+        s2++; 
+    } 
+  
+    return (*(unsigned char*)s1 - *(unsigned char*)s2); 
 }
