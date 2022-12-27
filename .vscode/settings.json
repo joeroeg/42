@@ -6,7 +6,7 @@
 		"unistd.h": "c",
 		"stdio.h": "c"
 	},
-	"C_Cpp.errorSquiggles": "Disabled",
+	"C_Cpp.errorSquiggles": "disabled",
 	"lldb.showDisassembly": "auto",
 	"lldb.dereferencePointers": false,
 	"lldb.consoleMode": "evaluate",
