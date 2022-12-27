@@ -35,11 +35,11 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int ft_atoi(const char *nptr); 
 void *ft_calloc( size_t num, size_t size );
-//char *ft_strdup( const char *str1 );
+char *ft_strdup( const char *str1 );
 char *ft_substr(char const *s, unsigned int start, size_t len);
-//char *ft_strjoin(char const *s1, char const *s2);
-//char *ft_strtrim(char const *s1, char const *set);
-//char **ft_split(char const *s, char c);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
+char **ft_split(char const *s, char c);
 //char *ft_itoa(int n);
 //char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -74,19 +74,20 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 // ft_strdup	char *ft_strdup( const char *str1 );int main(void){    char *str1 = "Hello World!";    char *str2;    str2 = ft_strdup(str1);    printf("str1: %s\n", str1);    printf("str2: %s\n", str2);        free(str2);    return 0;}
 // ft_substr 	int main(void)	char str[] = "Hello World!";	char *substr;	substr = ft_substr(str, 6, 5);	printf("%s\n", substr);	free(substr);	return (0);}
 // ft_strjoin  	int main(void){	char s1[] = "Hello";	char s2[] = "World!";	char *str;	str = ft_strjoin(s1, s2);	printf("%s\n", str);	free(str);	return (0);}
-// ft_strtrim
-int main(int argc, char **argv)
-{
-	if (argc == 3)
-	{
-		char *result;
-		result = ft_strtrim(argv[1], argv[2]);
-		printf("%s", result);
-		free(result);
-	}
-	return 0;
-}
+// ft_strtrim	int main(int argc, char **argv){	if (argc == 3)	{		char *result;		result = ft_strtrim(argv[1], argv[2]);		printf("%s", result);		free(result);	}	return 0;}
 // ft_split 
+int main() 
+{ 
+    char a[] = "This is a sample string for testing"; 
+    int i; 
+      
+    char** result = ft_split(a, ' '); 
+  
+    for (i=0; result[i]; i++) 
+        printf("%s\n", result[i]); 
+  
+    return 0; 
+}
 // ft_itoa 
 // ft_strmapi 
 // ft_striteri  
