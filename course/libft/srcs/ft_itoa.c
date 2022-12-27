@@ -12,40 +12,42 @@
 
 #include "libft.h"
 
-static unsigned int ft_digits(unsigned int n)
+static int	ft_num_digits(int n)
 {
-    if (n == 0) return 1;
+	int	i;
 
-    unsigned int result = 0;
-    while (n != 0) 
-	{
-        n /= 10;
-		++result;
-    }
-    return result;
+	if (n == 0)
+		return (1);
+	i = (n < 0) ? 2 : 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }
 
-char* ft_itoa(int n)
+static char	*ft_write_str(char *s, int i, int long n)
 {
-    int i = 0; 
-	int sign = (n < 0) ? -1 : 1;
-    int num_digits = ft_digits((unsigned int)(sign * n));
-    
-    char* str = malloc(num_digits + 2); // allocate memory for the null character
-    
-    if (str == NULL) return NULL;
-	
-	i = num_digits; // define i outside of the loop
-	while (i > 0)
+	if (i > 0)
+		ft_write_str(s, i - 1, n / 10);	
+	s[i] = n % 10 + '0';
+	return (s);
+}
+
+char *ft_itoa(int n)
+{
+	long int	temp;
+	char		*r;
+	int			len;
+
+	temp = n;
+	len = ft_num_digits(temp);
+	if (!(r = (char *)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	if (n < 0)
 	{
-		str[i - 1] = (n % 10) + '0'; // set the char at position i-1 to the last digit of n
-		n /= 10; // divide n by 10
-		i--;
+		temp = -temp;
+		r[0] = '-';
 	}
-	if (sign < 0)
-	{
-    str[0] = '-'; // add a negative sign if the number is negative
-	}
-	str[num_digits + 1] = '\0'; // add a null character at the end of the string
-	return str;
+	ft_write_str(r, len - 1, temp);
+	r[len] = '\0';
+	return (r);
 }

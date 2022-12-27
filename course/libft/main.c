@@ -76,10 +76,11 @@ void ft_putnbr_fd(int n, int fd);
 // ft_strjoin  	int main(void){	char s1[] = "Hello";	char s2[] = "World!";	char *str;	str = ft_strjoin(s1, s2);	printf("%s\n", str);	free(str);	return (0);}
 // ft_strtrim	int main(int argc, char **argv){	if (argc == 3)	{		char *result;		result = ft_strtrim(argv[1], argv[2]);		printf("%s", result);		free(result);	}	return 0;}
 // ft_split		int main() {     char a[] = "This is a sample string for testing";     int i;           char** result = ft_split(a, ' ');       for (i=0; result[i]; i++)         printf("%s\n", result[i]);       return 0; }
-// ft_itoa		int main() {    int num = -12345; // sample number     char* str = ft_itoa(num);    if (str != NULL) {        printf("String conversion of %d is %s\n", num, str);        free(str);    } else {        printf("Error converting number to string\n");    }    return 0;}
+// ft_itoa		
+int main() {    int num = -12345; char* str = ft_itoa(num);    if (str != NULL) {        printf("String conversion of %d is %s\n", num, str);        free(str);    } else {        printf("Error converting number to string\n");    }    return 0;}
 // ft_strmapi	char change(unsigned int index, char character){    return character + 1;}int main(void){    char s[] = "This is a string";    char (*f) (unsigned int, char) = &change;    char *newString = ft_strmapi(s, f);    printf("Original string: %s\n", s);    printf("New string: %s\n", newString);    free(newString);    return 0;}
-// ft_striteri	void func(unsigned int i, char* c) {    printf("index: %d, character: %c\n", i, *c);} int main(void) {    char str[] = "Hello World";    ft_striteri(str, &func);    return 0;}
 // ft_putchar_fd	int main(int argc, char **argv){	int fd = open("myfile", O_WRONLY | O_CREAT);	ft_putchar_fd('c', fd);	close(fd);	return 0;}
 // ft_putstr_fd		void	ft_putstr_fd(char *s, int fd);int	main(void){	char str[] = "Hello World!";	int fd = 1;	ft_putstr_fd(str, fd);	return (0);}
 // ft_putendl_fd	int main(void){   char *s = "Hello World!";    int fd = 1;    ft_putendl_fd(s, fd);    return 0; }
 // ft_putnbr_fd		void ft_putnbr_fd(int n, int fd);int main(void) {	ft_putnbr_fd(-1567, 1);	return 0;}
+// ft_striteri	void func(unsigned int i, char* c) {    printf("index: %d, character: %c\n", i, *c);} int main(void) {    char str[] = "Hello World";    ft_striteri(str, &func);    return 0;}
