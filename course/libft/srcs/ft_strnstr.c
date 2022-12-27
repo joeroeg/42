@@ -52,6 +52,8 @@ char *ft_strnstr(const char *haystack, const char *neddle, size_t n)
 {
 	size_t len = ft_strlen(neddle);
 
+	if (!haystack || !neddle)
+		return (NULL);
 	if (!len)
 		return (char *)haystack;
 
