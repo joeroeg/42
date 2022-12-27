@@ -32,7 +32,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	char *substr;
 	unsigned int i;
 
-	if (start > ft_strlen(s))
+	if (start >= ft_strlen(s))
 		return (NULL);
 	substr = (char*)malloc(sizeof(char) * (len + 1));
 	if (substr == NULL)
