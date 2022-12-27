@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-static int ft_digits(unsigned int n)
+static unsigned int ft_digits(unsigned int n)
 {
     if (n == 0) return 1;
 
-    int result = 0;
+    unsigned int result = 0;
     while (n != 0) 
 	{
         n /= 10;
@@ -28,22 +28,24 @@ static int ft_digits(unsigned int n)
 char* ft_itoa(int n)
 {
     int i = 0; 
-    int sign = (n < 0) ? -1 : 1;
+	int sign = (n < 0) ? -1 : 1;
     int num_digits = ft_digits((unsigned int)(sign * n));
     
-    char* str = malloc(num_digits +2);
+    char* str = malloc(num_digits + 2); // allocate memory for the null character
     
     if (str == NULL) return NULL;
-    str[num_digits + 1] = '\0';
 	
-	i = num_digits;
+	i = num_digits; // define i outside of the loop
 	while (i > 0)
 	{
-		str[i - 1] = (n % 10) + '0';
-		n /= 10;
+		str[i - 1] = (n % 10) + '0'; // set the char at position i-1 to the last digit of n
+		n /= 10; // divide n by 10
 		i--;
 	}
-
-    if (sign < 0) str[0] = '-';
-    return str;
+	if (sign < 0)
+	{
+    str[0] = '-'; // add a negative sign if the number is negative
+	}
+	str[num_digits + 1] = '\0'; // add a null character at the end of the string
+	return str;
 }
