@@ -71,8 +71,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 // ft_strnstr	int main(){	char haystack[] = "Hello World";	char needle[] = "Hello";	size_t haystack_len = 11; 	char *substring = ft_strnstr(haystack, needle, haystack_len); 	if (substring)		printf("Found substring: %s\n", substring);	else		printf("Substring not found\n"); 	return 0;}
 int main() 
 { 
-    const char s[] = "FUCK YOU I LOVE strnstr!!!"; 
-    const char find[] = "I"; 
+    const char s[] = "FUCK YOU LOVE strnstr!!!"; 
+    const char find[] = "L"; 
     size_t slen = 11; 
   
     char* result = ft_strnstr(s, find, slen); 

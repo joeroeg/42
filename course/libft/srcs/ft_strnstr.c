@@ -43,23 +43,26 @@ Important Requirements:
 Additional Information: 
 - This function is case sensitive, so if you are looking for a substring with different casing, you will not find it.
 - Similar functions in C language include strstr(), memmem(), and strcasestr().
-
-Requirements:
-
 */
 
 char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 {
-	size_t n;
- 
-	if (*neddle == '\0')
-		return ((char*)haystack);
-	n = ft_strlen(neddle);
-	while (*haystack != '\0' && len-- >= n)
+	size_t	i;
+	size_t	j;
+	size_t	length;
+
+	if (!neddle[0])
+		return ((char *)haystack);
+	length = ft_strlen(neddle);
+	i = 0;
+	while (i < len && haystack[i])
 	{
-		if (ft_strncmp(haystack, neddle, n) == 0)
-			return ((char*)haystack);
-		haystack++;
+		j = 0;
+		while (i + j < len && haystack[i + j] == neddle[j] && j < length)
+			j++;
+		if (j == length)
+		return ((char *)haystack + i);
+		i++;
 	}
 	return (NULL);
 }
