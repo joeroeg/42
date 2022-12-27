@@ -68,18 +68,9 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 // ft_strncmp	int main() {    int result;    const char str1[] = "abcdef";    const char str2[] = "abcdefghijklmnop";     result = ft_strncmp(str1, str2, 6);     if ( result < 0 )     {        printf("str1 is less than str2\n");    }     else if ( result > 0 )     {        printf("str2 is less than str1\n");    }     else     {        printf("str1 is equal to str2\n");    }     return 0;}
 // ft_memchr	int main(void){    char str[] = "This is a sample string";    char * pch;    printf ("Looking for the 's' character in \"%s\"...\n",str);    pch=ft_memchr(str,'s',ft_strlen(str));    while (pch!=NULL)    {        printf ("found at %ld\n",pch-str+1);        pch=ft_memchr(pch+1,'s', ft_strlen(pch+1));    }    return 0;}
 // ft_memcmp	int main(void) {     // define two blocks of memory     char str1[] = "abcdef";     char str2[] = "abcdez";       int result;     result = ft_memcmp(str1, str2, 6);    printf("result : %d\n", result);    return 0; }
-// ft_strnstr	int main(){	char haystack[] = "Hello World";	char needle[] = "Hello";	size_t haystack_len = 11; 	char *substring = ft_strnstr(haystack, needle, haystack_len); 	if (substring)		printf("Found substring: %s\n", substring);	else		printf("Substring not found\n"); 	return 0;}
-int main() 
-{ 
-    const char s[] = "FUCK YOU LOVE strnstr!!!"; 
-    const char find[] = "L"; 
-    size_t slen = 11; 
-  
-    char* result = ft_strnstr(s, find, slen); 
-    printf("%s\n", result);
-    return 0; 
-}
-// ft_atoi 
+// ft_strnstr	int main() {     const char s[] = "FUCK YOU LOVE strnstr!!!";     const char find[] = "L";     size_t slen = 11;       char* result = ft_strnstr(s, find, slen);     printf("%s\n", result);    return 0; }
+// ft_atoi
+ 
 // ft_calloc 
 // ft_strdup 
 // ft_substr 
