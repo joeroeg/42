@@ -36,7 +36,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int ft_atoi(const char *nptr); 
 void *ft_calloc( size_t num, size_t size );
 //char *ft_strdup( const char *str1 );
-//char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_substr(char const *s, unsigned int start, size_t len);
 //char *ft_strjoin(char const *s1, char const *s2);
 //char *ft_strtrim(char const *s1, char const *set);
 //char **ft_split(char const *s, char c);
@@ -69,24 +69,11 @@ void *ft_calloc( size_t num, size_t size );
 // ft_memchr	int main(void){    char str[] = "This is a sample string";    char * pch;    printf ("Looking for the 's' character in \"%s\"...\n",str);    pch=ft_memchr(str,'s',ft_strlen(str));    while (pch!=NULL)    {        printf ("found at %ld\n",pch-str+1);        pch=ft_memchr(pch+1,'s', ft_strlen(pch+1));    }    return 0;}
 // ft_memcmp	int main(void) {     // define two blocks of memory     char str1[] = "abcdef";     char str2[] = "abcdez";       int result;     result = ft_memcmp(str1, str2, 6);    printf("result : %d\n", result);    return 0; }
 // ft_strnstr	int main() {     const char s[] = "FUCK YOU LOVE strnstr!!!";     const char find[] = "L";     size_t slen = 11;       char* result = ft_strnstr(s, find, slen);     printf("%s\n", result);    return 0; }
-// ft_atoi		 int main(int argc, char *argv[]){	if (argc == 2)	{		printf("%d\n", ft_atoi(argv[1]));	}	return 0;}
-// ft_calloc int main(void)
-{
-    int *p1 = ft_calloc(4, sizeof(int));
-    int *p2 = ft_calloc(1, sizeof(int[4]));
-    int *p3 = ft_calloc(4, sizeof *p3);
- 
-    if(p2) {
-        for(int n=0; n<4; ++n)
-            printf("p2[%d] == %d\n", n, p2[n]);
-    }
- 
-    free(p1);
-    free(p2);
-    free(p3);
-}
-// ft_strdup 
-// ft_substr 
+// ft_atoi		int main(int argc, char *argv[]){	if (argc == 2)	{		printf("%d\n", ft_atoi(argv[1]));	}	return 0;}
+// ft_calloc	int main(void){    int *p1 = ft_calloc(4, sizeof(int));    int *p2 = ft_calloc(1, sizeof(int[4]));    int *p3 = ft_calloc(4, sizeof *p3);     if(p2) {        for(int n=0; n<4; ++n)            printf("p2[%d] == %d\n", n, p2[n]);    }     free(p1);    free(p2);    free(p3);}
+// ft_strdup	char *ft_strdup( const char *str1 );int main(void){    char *str1 = "Hello World!";    char *str2;    str2 = ft_strdup(str1);    printf("str1: %s\n", str1);    printf("str2: %s\n", str2);        free(str2);    return 0;}
+// ft_substr 	int main(void)	char str[] = "Hello World!";	char *substr;	substr = ft_substr(str, 6, 5);	printf("%s\n", substr);	free(substr);	return (0);}
+
 // ft_strjoin  
 // ft_strtrim 
 // ft_split 
