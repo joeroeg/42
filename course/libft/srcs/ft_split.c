@@ -31,13 +31,14 @@ static size_t	ft_wordcount(char const *s, char c)
 }
 
 char **ft_split(char const *s, char c) 
-{ 
+{
+	if (s == NULL)
+		return NULL; 
     int i = 0;
 	int j = 0;
 	int len = 0;
 	int wordcount = ft_wordcount(s,c);
 	char** strarr = (char**)malloc(sizeof(char*) * wordcount); 
-	
 	while (i < wordcount) 
 	{ 
 		while (s[j] == c) j++;  
