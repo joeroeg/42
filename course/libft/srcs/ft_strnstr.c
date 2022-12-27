@@ -25,7 +25,9 @@ Parameters:
 - len – size_t variable with the maximum length of haystack
 
 Return value: 
-- Char pointer - returns a pointer to the beginning of the located substring, or NULL if the substring is not found. 
+- If needle is an empty string, haystack is returned;
+- if neddle occurs nowhere in haystack, NULL is returned;
+- If the needle is found in the haystack, a pointer to the first character of the first occurrence of the needle in the haystack is returned.
 
 Tools and Techniques: 
 - strlen - to calculate the length of haystack and needle 
@@ -43,15 +45,6 @@ Additional Information:
 - Similar functions in C language include strstr(), memmem(), and strcasestr().
 
 Requirements:
-- should work with basic input
-- should work with an empty haystack
-- should work with an empty neddle
-- should work with an empty haystack_len
-- should work with the same pointer as an input ft_strnstr(s1, s1, max)
-- requires that the memory region beginning at s1-4096+size and ending at s1-1, and the memory region beginning at s2-4096+size and ending at s2-1 both be valid memory regions that can be accessed. It also requires that both memory regions be allocated and owned by the same process so that the process can set the protection flags.
-- when writing a strnstr function, it is important to take into account that if the same pointer is used for both haystack and needle, and a length value larger than the size of the haystack is used, the function will not work properly. Therefore, it is important to make sure that the haystack and needle pointers are different from each other, and that the length value does not exceed the size of the haystack.
-- should be relatively fast (it is important to make sure that the strnstr is optimized to minimize time and resources used. it may be beneficial to use data structures such as hash tables to make searches faster.)
-- do not crush when null parameter is sent with a size of 0
 
 */
 
@@ -59,7 +52,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t len = ft_strlen(s2);
 
-	if (len == 0)
+	if (!len)
 		return (char *)s1;
 
 	while (n >= len && *s1) {
