@@ -27,23 +27,25 @@ Additionally, this function can be used as a building block for more complex str
 
 Other similar functions include strncpy(), strncat(), strndup(), and strncmp(). These functions are used for copying, concatenating, duplicating, and comparing strings respectively.
 */
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
-	unsigned int i;
+	size_t	i;
+	size_t	outlen;
+	char	*output;
 
-	if (start >= ft_strlen(s))
-		return (NULL);
-	substr = (char*)malloc(sizeof(char) * (len + 1));
-	if (substr == NULL)
+	if (ft_strlen(s) < start)
+		outlen = 0;
+	else
+		outlen = ft_strlen(&s[start]) > len ? len : ft_strlen(&s[start]);
+	if (!(output = (char *)malloc(outlen + 1)))
 		return (NULL);
 	i = 0;
-	while (i < len && s[start] != '\0')
+	while (i < outlen)
 	{
-		substr[i] = s[start];
-		i++;
-		start++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	output[i] = s[start + i];
+	i++;
 }
+output[i] = '\0';
+return (output);
+}
+
