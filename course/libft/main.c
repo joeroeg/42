@@ -70,8 +70,7 @@ void *ft_calloc( size_t num, size_t size );
 // ft_memcmp	int main(void) {     // define two blocks of memory     char str1[] = "abcdef";     char str2[] = "abcdez";       int result;     result = ft_memcmp(str1, str2, 6);    printf("result : %d\n", result);    return 0; }
 // ft_strnstr	int main() {     const char s[] = "FUCK YOU LOVE strnstr!!!";     const char find[] = "L";     size_t slen = 11;       char* result = ft_strnstr(s, find, slen);     printf("%s\n", result);    return 0; }
 // ft_atoi		 int main(int argc, char *argv[]){	if (argc == 2)	{		printf("%d\n", ft_atoi(argv[1]));	}	return 0;}
-// ft_calloc 
-int main(void)
+// ft_calloc int main(void)
 {
     int *p1 = ft_calloc(4, sizeof(int));
     int *p2 = ft_calloc(1, sizeof(int[4]));
