@@ -40,7 +40,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
-//char *ft_itoa(int n);
+char *ft_itoa(int n);
 //char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void ft_striteri(char *s, void (*f)(unsigned int, char*));
 //void ft_putstr_fd(char *s, int fd);
@@ -75,20 +75,21 @@ char **ft_split(char const *s, char c);
 // ft_substr 	int main(void)	char str[] = "Hello World!";	char *substr;	substr = ft_substr(str, 6, 5);	printf("%s\n", substr);	free(substr);	return (0);}
 // ft_strjoin  	int main(void){	char s1[] = "Hello";	char s2[] = "World!";	char *str;	str = ft_strjoin(s1, s2);	printf("%s\n", str);	free(str);	return (0);}
 // ft_strtrim	int main(int argc, char **argv){	if (argc == 3)	{		char *result;		result = ft_strtrim(argv[1], argv[2]);		printf("%s", result);		free(result);	}	return 0;}
-// ft_split 
-int main() 
-{ 
-    char a[] = "This is a sample string for testing"; 
-    int i; 
-      
-    char** result = ft_split(a, ' '); 
-  
-    for (i=0; result[i]; i++) 
-        printf("%s\n", result[i]); 
-  
-    return 0; 
-}
+// ft_split		int main() {     char a[] = "This is a sample string for testing";     int i;           char** result = ft_split(a, ' ');       for (i=0; result[i]; i++)         printf("%s\n", result[i]);       return 0; }
 // ft_itoa 
+int main() {
+    int num = -12345; // sample number 
+
+    char* str = ft_itoa(num);
+
+    if (str != NULL) {
+        printf("String conversion of %d is %s\n", num, str);
+        free(str);
+    } else {
+        printf("Error converting number to string\n");
+    }
+    return 0;
+}
 // ft_strmapi 
 // ft_striteri  
 // ft_putchar_fd int main(int argc, char **argv){	int fd = open("myfile", O_WRONLY | O_CREAT);	ft_putchar_fd('c', fd);	close(fd);	return 0;}
