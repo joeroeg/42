@@ -33,7 +33,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memchr(const void *s, int c, size_t n); 
 int ft_memcmp(const void *s1, const void *s2, size_t n); 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
-//int ft_atoi(const char *nptr); 
+int ft_atoi(const char *nptr); 
 //void *ft_calloc( size_t num, size_t size );
 //char *ft_strdup( const char *str1 );
 //char *ft_substr(char const *s, unsigned int start, size_t len);
@@ -70,7 +70,14 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 // ft_memcmp	int main(void) {     // define two blocks of memory     char str1[] = "abcdef";     char str2[] = "abcdez";       int result;     result = ft_memcmp(str1, str2, 6);    printf("result : %d\n", result);    return 0; }
 // ft_strnstr	int main() {     const char s[] = "FUCK YOU LOVE strnstr!!!";     const char find[] = "L";     size_t slen = 11;       char* result = ft_strnstr(s, find, slen);     printf("%s\n", result);    return 0; }
 // ft_atoi
- 
+ int main(int argc, char *argv[])
+{
+	if (argc == 2)
+	{
+		printf("%d\n", ft_atoi(argv[1]));
+	}
+	return 0;
+}
 // ft_calloc 
 // ft_strdup 
 // ft_substr 
