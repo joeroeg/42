@@ -12,7 +12,6 @@ SRC =	ft_isalpha.c \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
-		ft_putchar_fd.c \
 		ft_memmove.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
@@ -33,10 +32,11 @@ SRC =	ft_isalpha.c \
 		ft_split.c \
 		ft_itoa.c \
 		ft_strmapi.c \
-		#ft_striteri.c \
-		#ft_putstr_fd.c \
-		#ft_putendl_fd.c \
-		#ft_putnbr_fd.c \
+		ft_striteri.c \
+		ft_putstr_fd.c \
+		ft_putchar_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 
 OBJ_DIR	= objs/
 OBJ		= ${addprefix ${OBJ_DIR}, ${SRC:.c=.o}}
