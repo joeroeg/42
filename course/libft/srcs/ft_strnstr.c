@@ -65,7 +65,9 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t haystack_len)
   size_t needle_len = ft_strlen(needle);
 
   if (!needle || !haystack || !haystack_len)
-		return (NULL);
+		return NULL;
+  if (haystack_len < needle_len)
+		return NULL;
   if (!needle_len)
 		return (char *)haystack;
 
