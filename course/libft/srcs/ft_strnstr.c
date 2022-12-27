@@ -48,21 +48,18 @@ Requirements:
 
 */
 
-char *ft_strnstr(const char *haystack, const char *neddle, size_t n)
+char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 {
-	size_t len = ft_strlen(neddle);
-
-	if (!haystack || !neddle)
-		return (NULL);
-	if (!len)
-		return (char *)haystack;
-
-	while (n >= len && *haystack) {
-		if (*haystack == *neddle && !ft_memcmp(haystack, neddle, len))
-			return (char *)haystack;
+	size_t n;
+ 
+	if (*neddle == '\0')
+		return ((char*)haystack);
+	n = ft_strlen(neddle);
+	while (*haystack != '\0' && len-- >= n)
+	{
+		if (ft_strncmp(haystack, neddle, n) == 0)
+			return ((char*)haystack);
 		haystack++;
-		n--;
 	}
-
 	return (NULL);
 }

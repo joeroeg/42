@@ -73,7 +73,7 @@ int main()
 { 
     const char s[] = "FUCK YOU I LOVE strnstr!!!"; 
     const char find[] = "I"; 
-    size_t slen = 0; 
+    size_t slen = 11; 
   
     char* result = ft_strnstr(s, find, slen); 
     printf("%s\n", result);
