@@ -73,8 +73,19 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 // ft_calloc	int main(void){    int *p1 = ft_calloc(4, sizeof(int));    int *p2 = ft_calloc(1, sizeof(int[4]));    int *p3 = ft_calloc(4, sizeof *p3);     if(p2) {        for(int n=0; n<4; ++n)            printf("p2[%d] == %d\n", n, p2[n]);    }     free(p1);    free(p2);    free(p3);}
 // ft_strdup	char *ft_strdup( const char *str1 );int main(void){    char *str1 = "Hello World!";    char *str2;    str2 = ft_strdup(str1);    printf("str1: %s\n", str1);    printf("str2: %s\n", str2);        free(str2);    return 0;}
 // ft_substr 	int main(void)	char str[] = "Hello World!";	char *substr;	substr = ft_substr(str, 6, 5);	printf("%s\n", substr);	free(substr);	return (0);}
-
 // ft_strjoin  
+
+int main(void)
+{
+	char s1[] = "Hello";
+	char s2[] = "World!";
+	char *str;
+
+	str = ft_strjoin(s1, s2);
+	printf("%s\n", str);
+	free(str);
+	return (0);
+}
 // ft_strtrim 
 // ft_split 
 // ft_itoa 
