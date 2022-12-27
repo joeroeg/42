@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-static int	ft_num_digits(int n)
+static size_t	ft_num_digits(unsigned int n)
 {
-	int	i;
+	size_t	i;
 
 	if (n == 0)
 		return (1);
