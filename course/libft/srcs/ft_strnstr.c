@@ -48,17 +48,17 @@ Requirements:
 
 */
 
-char *ft_strnstr(const char *s1, const char *s2, size_t n)
+char *ft_strnstr(const char *haystack, const char *neddle, size_t n)
 {
-	size_t len = ft_strlen(s2);
+	size_t len = ft_strlen(neddle);
 
 	if (!len)
-		return (char *)s1;
+		return (char *)haystack;
 
-	while (n >= len && *s1) {
-		if (*s1 == *s2 && !ft_memcmp(s1, s2, len))
-			return (char *)s1;
-		s1++;
+	while (n >= len && *haystack) {
+		if (*haystack == *neddle && !ft_memcmp(haystack, neddle, len))
+			return (char *)haystack;
+		haystack++;
 		n--;
 	}
 

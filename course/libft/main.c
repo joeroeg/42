@@ -72,8 +72,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int main() 
 { 
     const char s[] = "FUCK YOU I LOVE strnstr!!!"; 
-    const char find[] = "hello"; 
-    size_t slen = strlen(s); 
+    const char find[] = "I"; 
+    size_t slen = 0; 
   
     char* result = ft_strnstr(s, find, slen); 
     printf("%s\n", result);
