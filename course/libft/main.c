@@ -41,7 +41,7 @@ char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
 char *ft_itoa(int n);
-//char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void ft_striteri(char *s, void (*f)(unsigned int, char*));
 //void ft_putstr_fd(char *s, int fd);
 //void ft_putendl_fd(char *s, int fd);
@@ -76,21 +76,20 @@ char *ft_itoa(int n);
 // ft_strjoin  	int main(void){	char s1[] = "Hello";	char s2[] = "World!";	char *str;	str = ft_strjoin(s1, s2);	printf("%s\n", str);	free(str);	return (0);}
 // ft_strtrim	int main(int argc, char **argv){	if (argc == 3)	{		char *result;		result = ft_strtrim(argv[1], argv[2]);		printf("%s", result);		free(result);	}	return 0;}
 // ft_split		int main() {     char a[] = "This is a sample string for testing";     int i;           char** result = ft_split(a, ' ');       for (i=0; result[i]; i++)         printf("%s\n", result[i]);       return 0; }
-// ft_itoa 
-int main() {
-    int num = -12345; // sample number 
+// ft_itoa		int main() {    int num = -12345; // sample number     char* str = ft_itoa(num);    if (str != NULL) {        printf("String conversion of %d is %s\n", num, str);        free(str);    } else {        printf("Error converting number to string\n");    }    return 0;}
+// ft_strmapi 
 
-    char* str = ft_itoa(num);
-
-    if (str != NULL) {
-        printf("String conversion of %d is %s\n", num, str);
-        free(str);
-    } else {
-        printf("Error converting number to string\n");
-    }
+int main(void) {
+    char *s1 = "hello world";
+    char *s2;
+    
+    s2 = ft_strmapi(s1, ft_toupper(s2)); // apply toupper to each character and store the result in s2
+    assert(strcmp(s2, "HELLO WORLD") == 0); // verify that the result is correct
+    
+    printf("All tests passed.\n");
     return 0;
 }
-// ft_strmapi 
+
 // ft_striteri  
 // ft_putchar_fd int main(int argc, char **argv){	int fd = open("myfile", O_WRONLY | O_CREAT);	ft_putchar_fd('c', fd);	close(fd);	return 0;}
 // ft_putstr_fd 
