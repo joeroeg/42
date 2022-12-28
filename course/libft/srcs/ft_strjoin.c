@@ -6,18 +6,18 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:16:50 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/15 15:36:48 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/27 18:39:42 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *new_str;
-	int i;
-	int j;
-	int k;
+	char	*new_str;
+	int		i;
+	int		j;
+	int		k;
 
 	if (!s1 || !s2)
 		return (NULL);

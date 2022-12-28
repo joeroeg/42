@@ -1,7 +1,6 @@
 {
 	"folders": [
 		{
-			"name": "42",
 			"path": "."
 		}
 	],
@@ -23,6 +22,10 @@
 			"time.h": "c",
 			"sstream": "c"
 		},
-		"codechecker.backend.compilationDatabasePath": "/Users/hzhukov/Desktop/42/42.code-workspace"
+		"codechecker.backend.compilationDatabasePath": "/Users/hzhukov/Desktop/42/42.code-workspace",
+		"editor.insertSpaces": false,
+		"editor.renderWhitespace": "all",
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true
 	}
 }

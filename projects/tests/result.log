@@ -1,0 +1,162 @@
+ft_memset:     [OK] [OK] [OK] [NO CRASH] [OK] [OK] [OK] 
+[no crash]: your memset does not segfault when null parameter is sent !
+Test code:
+	ft_memset(((void *)0), 'a', 12);
+
+
+ft_bzero:      [OK] [OK] [NO CRASH] [OK] 
+[no crash]: your bzero does not segfault when null params is sent
+Test code:
+	ft_bzero(((void *)0), 0x12);
+
+
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] [OK] [OK] 
+[no crash]: your memcpy does not segv with NULL on first params
+Test code:
+	ft_memcpy(((void *)0), "segfaulter tu dois", 17);
+
+
+[no crash]: your memcpy does not segv with NULL on second params
+Test code:
+	ft_memcpy("            ", ((void *)0), 17);
+
+
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] [OK] [OK] [OK] 
+[no crash]: your memmove does not segfault when null params is sent
+Test code:
+	char b[0xF0];
+
+	ft_memmove(((void *)0), b, 5);
+
+
+[no crash]: your memmove does not segfault when null params is sent
+Test code:
+	char b[0xF0];
+
+	ft_memmove(b, ((void *)0), 5);
+
+
+ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your memchr does not segfault when null param is sent
+Test code:
+	ft_memchr(((void *)0), '\0', 0x20);
+
+
+ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] 
+[no crash]: your memcmp does not segfault when null parameter is sent
+Test code:
+	char b1[] = "nyancat";
+
+	ft_memcmp(((void *)0), b1, 4);
+
+
+[no crash]: your memcmp does not segfault when null parameter is sent
+Test code:
+	char b1[] = "nyancat";
+
+	ft_memcmp(b1, ((void *)0), 4);
+
+
+ft_strlen:     [OK] [OK] [OK] [OK] [NO CRASH] [OK] [OK] [OK] [OK] 
+[no crash]: your strlen does not segv when null is sended
+Test code:
+	ft_strlen(((void *)0));
+
+
+ft_isalpha:    [OK] 
+ft_isdigit:    [OK] 
+ft_isalnum:    [OK] 
+ft_isascii:    [OK] 
+ft_isprint:    [OK] 
+ft_toupper:    [OK] 
+ft_tolower:    [OK] 
+ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your strchr does not segfault with NULL parameter
+Test code:
+	ft_strchr(((void *)0), '\0');
+
+
+ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your strrchr does not segfault when a null parameter is sent
+Test code:
+	ft_strrchr(((void *)0), '\0');
+
+
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] 
+[no crash]: your strncmp does not segfault when null parameter is sent
+Test code:
+	ft_strncmp(((void *)0), "nope", 3);
+
+
+[no crash]: your strncmp does not segfault when null parameter is sent
+Test code:
+	ft_strncmp("nope", ((void *)0), 3);
+
+	ft_strncmp(((void *)0), ((void *)0), 3);
+
+
+ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your strlcpy doe not segfault when null parameter is sent
+Test code:
+	ft_strlcpy(((void *)0), ((void *)0), 10);
+
+
+ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] [OK] 
+[no crash]: your strlcat does not segfault when null parameter is sent
+Test code:
+	char b[0xF] = "nyan !";
+
+	ft_strlcat(((void *)0), b, 2);
+
+
+[no crash]: your strlcat does not segfault when null parameter is sent
+Test code:
+	char b[0xF] = "nyan !";
+
+	ft_strlcat(b, ((void *)0), 2);
+
+
+ft_strnstr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] [NO CRASH] [OK] 
+[no crash]: your strnstr does not segfault when null parameter is sent
+Test code:
+	ft_strnstr("fake", ((void *)0), 3);
+
+
+[no crash]: your strnstr does not segfault when null parameter is sent
+Test code:
+	ft_strnstr(((void *)0), "fake", 3);
+
+
+ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your atoi does not work with the plus sign and spaces
+Test code:
+	ft_atoi(((void *)0));
+
+
+ft_calloc:     [OK] [OK] [OK] [OK] [OK] 
+ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
+[no crash]: your strdup does not segv with NULL parameter
+Test code:
+	ft_strdup(((void *)0));
+
+
+ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}[OK] 
+ft_strjoin:    [OK] [OK] [OK] [OK] [OK] {protected}
+ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strmapi:    [OK] [OK] [OK] [OK] [OK] {protected}
+ft_putchar_fd: [OK] [OK] 
+ft_putstr_fd:  [OK] [OK] {protected}
+ft_putendl_fd: [OK] [OK] {protected}
+ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK] 
+ft_lstnew:     [OK] [OK] [OK] [OK] 
+ft_lstadd_front: [OK] [OK] [OK] 
+ft_lstsize:    [OK] [OK] 
+ft_lstlast:    [OK] [OK] 
+ft_lstadd_back:[OK] [OK] [OK] 
+ft_lstdelone:  [OK] {protected}
+ft_lstclear:   [OK] [OK] [OK] {protected}
+ft_lstiter:    [OK] {protected}
+ft_lstmap:     [OK] {protected}
+ft_striteri:   [OK] [OK] {protected}

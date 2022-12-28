@@ -6,46 +6,38 @@
 /*   By: hzhukov <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:17:22 by hzhukov           #+#    #+#             */
-/*   Updated: 2022/12/15 15:37:15 by hzhukov          ###   ########.fr       */
+/*   Updated: 2022/12/27 18:42:13 by hzhukov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-/*
-This code creates a substring of a given string. 
-It takes in a string, the start index of the substring and the length of the substring as arguments. 
-The function then allocates memory for the substring and iterates through the characters of the original string starting at the given start index and adds them to the substring until the length is reached. 
-The substring is then terminated with a null character and returned.
-
-Extra:
-This function is important because it allows for the extraction of a substring from a given string. 
-It is commonly used in string manipulation and can be used to extract a specific part of a string or to find a certain pattern within a string. 
-It is also useful for formatting strings and other text processing tasks. 
-Additionally, this function can be used as a building block for more complex string manipulation algorithms.
-
-Other similar functions include strncpy(), strncat(), strndup(), and strncmp(). These functions are used for copying, concatenating, duplicating, and comparing strings respectively.
-*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	outlen;
 	char	*output;
 
+	if (!s)
+		return (NULL);
 	if (ft_strlen(s) < start)
 		outlen = 0;
 	else
-		outlen = ft_strlen(&s[start]) > len ? len : ft_strlen(&s[start]);
-	if (!(output = (char *)malloc(outlen + 1)))
+	{
+		if (ft_strlen(&s[start]) > len)
+		outlen = len;
+		else
+		outlen = ft_strlen(&s[start]);
+	}
+	output = (char *)malloc(outlen + 1);
+	if (!output)
 		return (NULL);
 	i = 0;
 	while (i < outlen)
 	{
-	output[i] = s[start + i];
-	i++;
+		output[i] = s[start + i];
+		i++;
+	}
+	output[i] = '\0';
+	return (output);
 }
-output[i] = '\0';
-return (output);
-}
-
