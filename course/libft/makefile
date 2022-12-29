@@ -36,12 +36,12 @@ SRC =	ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_striteri.c \
+
 
 OBJ_DIR	= objs/
 OBJ		= ${addprefix ${OBJ_DIR}, ${SRC:.c=.o}}
 ${OBJ_DIR}%.o:srcs/%.c
-		gcc ${PFLAGS} ${CFALGS} -c $< -o $@ 
+		gcc ${PFLAGS} ${CFALGS} -c $< -o $@
 
 ${NAME}:${OBJ_DIR} ${OBJ}
 		ar -rcs $@ ${OBJ}

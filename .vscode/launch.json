@@ -1,10 +1,11 @@
 {
     "configurations": [
+		
     {
         "type": "lldb",
         "request": "launch",
         "name": "Launch",
-        "program": "${workspaceFolder}/course/libft/a.out",
+        "program": "${workspaceFolder}/course/libft/srcs/a.out",
         "args": [],
         "cwd": "${workspaceFolder}",
     }

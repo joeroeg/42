@@ -10,103 +10,62 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include "libft.h"
 
-static	size_t	ft_num_digits(unsigned int n)
+int	ft_loop(int nb)
 {
-	size_t	i;
+	int	pow;
+	int	tmp;
 
-	i = 1;
-	if (n == 0)
-		return (1);
-	while (n > 9)
+	tmp = nb;
+	pow = 0;
+	if (nb == 0)
+		pow++;
+	while (tmp)
 	{
-		i++;
-		n /= 10;
+		tmp = tmp / 10;
+		pow++;
 	}
-	return (i);
+	return (pow);
 }
 
-static char	*ft_write_str(char *s, int i, int long n)
+char	*ft_malloc(int pow, int mod)
 {
-	if (i > 0)
-		ft_write_str(s, i - 1, n / 10);
-	s[i] = n % 10 + '0';
-	return (s);
+	char	*str;
+
+	str = (char *)malloc(pow + mod + 1);
+	return (str);
 }
 
-char	*ft_itoa(int n)
+char	*ft_fill(int nb, char *str, int pow)
 {
-	long int	temp;
-	char		*r;
-	int			len;
+	int		mod;
 
-	temp = n;
-	len = ft_num_digits(temp);
-	if (malloc(sizeof(char) * (len + 1)) == NULL)
-	{
-		return (NULL);
-	}
+	mod = nb < 0;
+	str[pow + mod] = 0;
+	if (mod)
+		*str++ = '-';
 	else
+		nb = -nb;
+	while (pow--)
 	{
-		r = malloc(sizeof(char) * (len + 1));
+		str[pow] = -(nb % 10) + '0';
+		nb /= 10;
 	}
-	if (n < 0)
-	{
-		temp = -temp;
-		r[0] = '-';
-	}
-	ft_write_str(r, len - 1, temp);
-	r[len] = '\0';
-	return (r);
+	return (str - mod);
 }
 
-/* reverse:  reverse string s in place */
-void reverse(char s[])
+char	*ft_itoa(int nb)
 {
-    int c, i, j;
+	int		mod;
+	int		pow;
+	char	*str;
 
-    for (i = 0, j = strlen(s)-1; i < j; i++, j--) {
-        c = s[i];
-        s[i] = s[j];
-        s[j] = c;
-    }
+	mod = nb < 0;
+	pow = ft_loop(nb);
+	str = ft_malloc(pow, mod);
+	if (!str)
+		return (NULL);
+	ft_fill(nb, str, pow);
+	return (str);
 }
-
-void itoa(int n, char s[])
-{
-    int i, sign;
-
-    sign = n;
-    i = 0;
-    do {        /* generate digits in reverse order */
-        s[i++] = abs(n % 10) + '0';     /* get next digit */
-    } while (n /= 10);                  /* delete it */
-    if (sign < 0)
-        s[i++] = '-';
-    s[i] = '\0';
-    reverse(s);
-}
-
-int	main(void)
-{
-	int	num1	= -1234;
-	int	num2	= -1234;
-	char	*str1 = ft_itoa(num1);
-	char	*str2 = itoa(num2, 1);
-	printf("String conversion of %d is %s\n", num1, str1);
-	printf("String conversion of %d is %s\n", num2, str2);
-	free(str1);
-	free(str2);
-	return (0);
-}
-
-

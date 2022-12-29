@@ -20,7 +20,11 @@
 			"memory": "c",
 			"algorithm": "c",
 			"time.h": "c",
-			"sstream": "c"
+			"sstream": "c",
+			"stddef.h": "c",
+			"complex": "c",
+			"string": "c",
+			"string_view": "c"
 		},
 		"codechecker.backend.compilationDatabasePath": "/Users/hzhukov/Desktop/42/42.code-workspace",
 		"editor.insertSpaces": false,

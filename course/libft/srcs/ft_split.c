@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+static void	ft_allfree(char **p)
+{
+	int	i;
+
+	i = 0;
+	while (p[i])
+		free(p[i++]);
+	free(p);
+}
+
+
 static size_t	ft_wordcount(char const *s, char c)
 {
 	int				i;
@@ -42,7 +53,7 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	wordcount = ft_wordcount (s, c);
 	strarr = (char **)malloc(sizeof(char *) * wordcount);
-	if (s == NULL)
+	if (!strarr)
 		return (NULL);
 	while (i < wordcount)
 	{
@@ -58,7 +69,9 @@ char	**ft_split(char const *s, char c)
 			}
 		strarr[i++] = ft_substr(s, j - len, len);
 		}
+		if (!strarr)
+			return (ft_allfree(strarr), NULL);
 	}
-	strarr[i] = NULL;
+	//strarr[i] = (NULL);
 	return (strarr);
 }
