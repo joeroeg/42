@@ -33,3 +33,9 @@
 // ft_putendl_fd	int main(void){   char *s = "Hello World!";    int fd = 1;    ft_putendl_fd(s, fd);    return 0; }
 // ft_putnbr_fd		void ft_putnbr_fd(int n, int fd);int main(void) {	ft_putnbr_fd(-1567, 1);	return 0;}
 // ft_striteri	void func(unsigned int i, char* c) {    printf("index: %d, character: %c\n", i, *c);} int main(void) {    char str[] = "Hello World";    ft_striteri(str, &func);    return 0;}
+int main()
+{
+	char a[] = "This is a sample string for testing";
+	int i;
+	char** result = ft_split(a, ' ');
+	for (i=0; result[i]; i++)         printf("%s\n", result[i]);       return 0; }

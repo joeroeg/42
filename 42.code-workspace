@@ -2,9 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../../Downloads/musl-1.2.3"
 		}
 	],
 	"settings": {
